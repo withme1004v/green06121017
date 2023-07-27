@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .list {
+        width: 1504px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .list > ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .list > ul > li {
+        position: relative;
+        overflow: hidden;
+      }
+      .list > ul > li .over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        color: #fff;
+        font-size: 17px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.5s;
+      }
+      .list > ul > li .over span {
+        opacity: 0;
+        transition: 0.5s ease-in 0.1s;
+      }
+      .list > ul > li .over p {
+        font-weight: bold;
+      }
+      .list > ul > li .over a {
+        display: block;
+        padding: 10px 20px;
+        background: #fff;
+        font-size: 14px;
+        margin-top: 20px;
+        opacity: 0;
+      }
+      .list > ul > li .over a:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        transition: 0s;
+      }
+      .list > ul > li:hover .over {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .list > ul > li:hover span {
+        opacity: 1;
+      }
+      .list > ul > li:hover a {
+        opacity: 1;
+        transition-delay: 0.2s;
+      }
+      .list > ul > li .inner {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover .inner {
+        transform: translateY(-20px);
+      }
+      .list > ul > li > img {
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover > img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul>
+        <li>
+          <img src="images/img01.png" alt="img01" />
+          <div class="over">
+            <div class="inner">
+              <span><img src="images/m-icon_brand.png" alt="" /></span>
+              <p>bread & starter</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <ul>
+            <li><img src="images/img02.png" alt="" /></li>
+            <li><img src="images/img03.png" alt="" /></li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/img04.jpg" alt="" />
+          <div class="over">
+            <div class="inner">
+              <span><img src="images/m-icon_brand.png" alt="" /></span>
+              <p>bread & starter</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li><img src="images/img05.png" alt="" /></li>
+        <li><img src="images/img06.jpg" alt="" /></li>
+        <li><img src="images/img07.jpg" alt="" /></li>
+        <li><img src="images/img08.jpg" alt="" /></li>
+      </ul>
+    </div>
+  </body>
+</html>
