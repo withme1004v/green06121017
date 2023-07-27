@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIRKENSTOCK</title>
+    <style>
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      #wrap {
+      }
+      #top {
+        background: #004084;
+        min-width: 1182px;
+      }
+      #top .inner {
+        width: 837px;
+        margin: 0 auto;
+        padding: 5px 0;
+      }
+      #top .inner ul {
+        float: right;
+      }
+      #top .inner ul li {
+        float: left;
+      }
+      #top .inner ul li a {
+        color: #fff;
+        font-size: 12px;
+      }
+      #top .inner ul li a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      #top .inner ul li a::after {
+        display: inline-block;
+        content: "/";
+        padding: 0 10px;
+      }
+      #top .inner ul li:last-child a::after {
+        content: "";
+      }
+      header {
+        width: 837px;
+        margin: 0 auto;
+      }
+      header .logo {
+        margin: 50px 0;
+        text-align: center;
+      }
+      header nav {
+        margin: 20px 0;
+        /* overflow: hidden; */
+      }
+      header nav ul li {
+        float: left;
+        width: calc(100% / 7);
+        text-align: center;
+      }
+      header nav ul li a:hover {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
+      #slide {
+        width: 837px;
+        height: 150px;
+        margin: 20px auto 50px;
+      }
+      #slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 0;
+      }
+      #icon {
+        width: 837px;
+        margin: 0 auto;
+      }
+      #icon ul li {
+        position: relative;
+        cursor: pointer;
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      #icon ul li p {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 109px;
+        height: 109px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        line-height: 109px;
+        box-sizing: border-box;
+        letter-spacing: -1px;
+        transform: translate(-50%, -50%);
+      }
+      #icon ul li:hover p {
+        display: block;
+      }
+      #product {
+        width: 1182px;
+        margin: 0 auto;
+      }
+      #product ul li {
+        position: relative;
+        float: left;
+        overflow: hidden;
+      }
+      #product ul li .box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        opacity: 0;
+      }
+      #product ul li:hover .box {
+        opacity: 1;
+        transition: 0.5s;
+      }
+      #product ul li .box p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        line-height: 30px;
+      }
+      #birken {
+        position: relative;
+        width: 1182px;
+        height: 313px;
+        margin: 0 auto;
+        background: #eee;
+      }
+      #birken .desc {
+        position: absolute;
+
+        text-align: right;
+        left: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      #birken .desc span {
+        font-size: 24px;
+      }
+      #birken ul {
+        float: right;
+      }
+      #birken ul li {
+        float: left;
+      }
+      footer {
+        background: #022857;
+        height: 100px;
+        line-height: 100px;
+      }
+      footer .foot {
+        width: 1182px;
+        margin: 0 auto;
+
+        /* padding: 50px 0; */
+        overflow: hidden;
+      }
+      footer .foot > div {
+        float: left;
+      }
+      footer .foot .logo {
+        width: 147px;
+      }
+      footer .foot .copyright {
+        width: calc(100% - 322px);
+        text-align: center;
+        color: #fff;
+      }
+      footer .foot .sns {
+        width: 175px;
+      }
+      footer .foot .sns ul {
+        overflow: hidden;
+        float: right;
+      }
+      footer .foot .sns ul li {
+        float: left;
+        padding-left: 25px;
+      }
+      footer .foot .sns ul li:first-child {
+        padding-left: 0;
+      }
+      footer img {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="top">
+        <div class="inner" class="clearfix">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+      <header>
+        <div class="logo"><img src="images/logo1.png" alt="logo1" /></div>
+        <nav>
+          <ul class="clearfix">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">COLLECTION</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">BOYS</a></li>
+            <li><a href="#">GIRLS</a></li>
+            <li><a href="#">SERVICES</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="slide"><img src="images/visual.png" alt="visual" /></div>
+      <div id="icon">
+        <ul class="clearfix">
+          <li>
+            <img src="images/icon1.png" alt="icon1" />
+            <p>ABOUT</p>
+          </li>
+          <li>
+            <img src="images/icon2.png" alt="icon2" />
+            <p>COLLECTION</p>
+          </li>
+          <li>
+            <img src="images/icon3.png" alt="icon3" />
+            <p>SHOP</p>
+          </li>
+          <li>
+            <img src="images/icon4.png" alt="icon4" />
+            <p>SERVICES</p>
+          </li>
+        </ul>
+      </div>
+      <div id="product">
+        <ul class="clearfix">
+          <li>
+            <img src="images/sub1.png" alt="sub1" />
+            <div class="box">
+              <p>
+                2018년 여름신상<br />
+                지금 바로 만나보세요!<br />
+                +
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="images/sub2.png" alt="sub2" />
+            <div class="box">
+              <p>
+                2018년 여름신상<br />
+                지금 바로 만나보세요!<br />
+                +
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="images/sub3.png" alt="sub3" />
+            <div class="box">
+              <p>
+                2018년 여름신상<br />
+                지금 바로 만나보세요!<br />
+                +
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="birken" class="clearfix">
+        <div class="desc">
+          <p>
+            건강한 신발을 만드는<br />
+            <span>버켄스탁</span>과 함께<br />
+            다양한 나를 만나보세요<br />
+            <a href="">지금 만나러가기</a>
+          </p>
+        </div>
+        <ul>
+          <li><img src="images/sub4.png" alt="sub4" /></li>
+          <li><img src="images/sub5.png" alt="sub5" /></li>
+          <li><img src="images/sub6.png" alt="sub6" /></li>
+        </ul>
+      </div>
+      <footer>
+        <div class="foot">
+          <div class="logo"><img src="images/logo2.png" alt="logo2" /></div>
+          <div class="copyright">
+            <p>copyright 2016(c) BIRKENSTOCK all right reserved</p>
+          </div>
+          <div class="sns">
+            <ul>
+              <li>
+                <a href="#"><img src="images/sns1.png" alt="sns1" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns2.png" alt="sns2" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns3.png" alt="sns3" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/sns4.png" alt="sns4" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

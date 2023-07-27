@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient</title>
+    <style>
+      p.bg {
+        width: 500px;
+        height: 500px;
+      }
+      .bg1 {
+        background-image: radial-gradient(at 30% 20%, red, blue);
+      }
+      .bg2 {
+        background-image: radial-gradient(closest-side at 30% 20%, red, blue);
+      }
+      .bg3 {
+        background-image: radial-gradient(farthest-side at 30% 20%, red, blue);
+      }
+      .bg4 {
+        background-image: radial-gradient(closest-corner at 30% 20%, red, blue);
+      }
+      .bg5 {
+        background-image: radial-gradient(
+          farthest-corner at 30% 20%,
+          red,
+          blue
+        );
+      }
+      .bg6 {
+        background-image: conic-gradient(red, green, yellow, blue);
+      }
+      .bg7 {
+        background-image: conic-gradient(from 90deg, red, green, yellow, blue);
+      }
+      .bg8 {
+        background-image: conic-gradient(
+          red 0deg,
+          red 90deg,
+          green 90deg,
+          green 180deg,
+          yellow 180deg,
+          yellow 270deg,
+          blue 270deg
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>at 30% 20%</h1>
+    <p class="bg bg1"></p>
+    <h1>closest-side at 30% 20%</h1>
+    <p class="bg bg2"></p>
+    <h1>farthest-side at 30% 20%</h1>
+    <p class="bg bg3"></p>
+    <h1>closest-corner at 30% 20%</h1>
+    <p class="bg bg4"></p>
+    <h1>farthest-corner at 30% 20%</h1>
+    <p class="bg bg5"></p>
+    <p class="bg bg6"></p>
+    <p class="bg bg7"></p>
+    <p class="bg bg8"></p>
+  </body>
+</html>

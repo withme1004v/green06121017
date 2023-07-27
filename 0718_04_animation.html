@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* position: relative; */
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: bg;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        /* animation-delay: -1s; */
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+      }
+      @keyframes bg {
+        0% {
+          transform: translateX(100px);
+          background: red;
+        }
+        50% {
+          background: yellow;
+        }
+        100% {
+          transform: translateX(200px);
+          background: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

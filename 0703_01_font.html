@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, "나눔고딕", Dotum, sans-serif;
+      }
+      p {
+        letter-spacing: 10px;
+        word-spacing: 20px;
+        /* text-decoration: line-through; */
+        text-decoration: overline;
+        text-transform: capitalize;
+        text-align: center;
+        height: 50px;
+        border: 1px solid #000;
+        vertical-align: middle;
+      }
+      div {
+        width: 100px;
+        border: 1px solid #000;
+        vertical-align: middle;
+        display: inline-block;
+        text-indent: 10px;
+      }
+      div.one {
+        height: 100px;
+        line-height: 100px; /*수직정렬안됨*/
+      }
+      div.two {
+        height: 50px;
+        line-height: 50px;
+        text-shadow: 2px 2px 0 rgba(255, 0, 0, 1);
+      }
+      .justify {
+        width: 500px;
+        text-align: justify; /*양쪽정렬왼쪽도 오른쪽도 정렬*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>green computer academy</p>
+    <p>그린 컴퓨터 아카데미</p>
+    <span>green computer academy</span><br />
+    <span>그린 컴퓨터 아카데미</span>
+    <div class="one">one<br />one</div>
+    <div class="two">two</div>
+    <div class="justify">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </div>
+    <div class="justify">
+      제1항의 탄핵소추는 국회재적의원 3분의 1 이상의 발의가 있어야 하며, 그
+      의결은 국회재적의원 과반수의 찬성이 있어야 한다. 다만, 대통령에 대한
+      탄핵소추는 국회재적의원 과반수의 발의와 국회재적의원 3분의 2 이상의 찬성이
+      있어야 한다.
+    </div>
+  </body>
+</html>

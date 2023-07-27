@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색중지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        position: relative;
+        width: 500px;
+        margin: 0 auto;
+      }
+      #wrap ul {
+        position: absolute;
+        left: 50px;
+        top: 150px;
+        font-size: 14px;
+        list-style-image: url(images/ico_bbslist.gif);
+      }
+      #wrap ul li a {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="search">
+        <img src="images/no_found.gif" alt="검색중지" />
+      </div>
+      <ul>
+        <li><a href="#">검색이 일시적으로 중지되었습니다.</a></li>
+        <li>
+          <a href="#"
+            >일시적으로 사용이 제한되었습니다. 조금있다 다시 접속하세요.</a
+          >
+        </li>
+        <li><a href="#">당신은 블랙리스트! 접근금지 대상자입니다.</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

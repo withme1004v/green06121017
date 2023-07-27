@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그</title>
+  </head>
+  <body>
+    <img src="images/menu1.jpg" alt="메뉴1" width="50" height="50" />
+    <img src="images/menu2.jpg" alt="메뉴2" style="width: 50px" />
+    <img src="images/menu3.jpg" alt="메뉴3" width="50" height="50" />
+    <img src="images/photo1.jpg" alt="photo1" width="50" height="50" />
+    <img
+      src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+      alt="다음로고"
+    />
+    <a href="http://www.daum.net">다음</a>
+    <a href="http://www.daum.net"
+      ><img
+        src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"
+        alt="다음로고"
+    /></a>
+    <p>
+      <a href=""><img src="images/map.jpg" alt="지도" /></a>
+    </p>
+    <img src="images/map.jpg" alt="지도" usemap="#korea" />
+    <map name="korea">
+      <!-- <area
+        shape="rect"
+        coords="66,467,143,535"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주시"
+      /> -->
+      <area
+        shape="circle"
+        coords="92,523,30"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주시"
+        target="_new"
+      />
+      <area
+        shape="poly"
+        coords="160,255,143,287,176,183,476,266"
+        href="https://www.daejeon.go.kr/"
+        alt="대전광역시"
+      />
+    </map>
+  </body>
+</html>

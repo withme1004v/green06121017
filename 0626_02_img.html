@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그</title>
+  </head>
+  <body>
+    <figure>
+      <img src="images/menu1.jpg" alt="menu1" width="200" />
+      <img src="images/menu2.jpg" alt="menu2" style="width: 200px" />
+      <figcaption>초등학습</figcaption>
+    </figure>
+    <figure>
+      <img src="images/menu2.jpg" alt="menu2" />
+    </figure>
+    <picture>
+      <source media="(min-width:1280px)" srcset="images/photo1.jpg" />
+      <source media="(min-width:1024px)" srcset="images/photo2.jpg" />
+      <source media="(min-width:768px)" srcset="images/photo3.jpg" />
+      <source media="(min-width:500px)" srcset="images/photo4.jpg" />
+      <img src="images/photo1.jpg" alt="photo1" />
+    </picture>
+  </body>
+</html>

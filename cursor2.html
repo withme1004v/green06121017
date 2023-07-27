@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Mouse Pointer with Font Awesome Icon</title>
+    <style>
+      body {
+        cursor: none;
+      }
+
+      .custom-pointer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      .custom-pointer i {
+        color: red;
+        font-size: 24px;
+        animation: movePointer 2s infinite;
+      }
+
+      @keyframes movePointer {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div class="custom-pointer">
+      <i class="fas fa-hand-pointer"></i>
+    </div>
+
+    <h1>Welcome to my webpage</h1>
+    <p>This is a sample paragraph.</p>
+
+    <script>
+      document.addEventListener("mousemove", function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var pointer = document.querySelector(".custom-pointer");
+        pointer.style.left = x + "px";
+        pointer.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

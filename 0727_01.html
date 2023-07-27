@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+      }
+      #wrap div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      #wrap div:first-child {
+        float: left;
+      }
+      #wrap div:nth-child(2) {
+        display: inline-block;
+      }
+      #wrap div:nth-child(3) {
+        float: right;
+      }
+      #wrap1 {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+      }
+      #wrap1 div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      #wrap3 {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+      }
+      #wrap3 div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      #wrap3 div:first-child {
+        display: inline-block;
+      }
+      #wrap3 div:last-child {
+        /* float: right; */
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      #wrap4 {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+      }
+      #wrap4 section {
+        width: 50%;
+        background: #f00;
+        display: flex;
+        justify-content: space-between;
+      }
+      #wrap4 div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      #wrap5 {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+      }
+      #wrap5 section {
+        width: calc(50% + 50px);
+        background: #f00;
+        display: flex;
+        justify-content: space-between;
+      }
+      #wrap5 div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div id="wrap1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div id="wrap3">
+      <div>wrap3</div>
+      <div>wrap3</div>
+    </div>
+    <div id="wrap4">
+      <section>
+        <div>2</div>
+        <div>3</div>
+      </section>
+    </div>
+    <div id="wrap5">
+      <section>
+        <div>2</div>
+        <div>3</div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 100%;
+        height: 640px;
+        border: 1px solid #000;
+      }
+      .sea-wave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-position: 10% top;
+        background-repeat: no-repeat;
+        animation-duration: 25s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .wave1 {
+        background-image: url(images/wave.svg);
+        animation-name: wave;
+        animation-duration: 15s;
+      }
+      .wave2 {
+        background-image: url(images/wave2.svg);
+        animation-name: wave2;
+        animation-delay: 0.5s;
+      }
+      @keyframes wave {
+        0% {
+          background-position: calc(50% - 15%) top;
+        }
+        50% {
+          background-position: calc(50% + 15%) 50px;
+        }
+        100% {
+          background-position: calc(50% - 15%) top;
+        }
+      }
+      @keyframes wave2 {
+        0% {
+          background-position: calc(30% - 15%) top;
+        }
+        50% {
+          background-position: calc(30% + 15%) 50px;
+        }
+        100% {
+          background-position: calc(30% - 15%) top;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="sea-wave wave1"></div>
+      <div class="sea-wave wave2"></div>
+    </div>
+  </body>
+</html>

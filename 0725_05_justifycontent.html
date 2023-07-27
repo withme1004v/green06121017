@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex {
+        display: flex;
+        background: #ccc;
+        margin: 10px;
+        height: 500px;
+        flex-direction: column;
+      }
+      .flex div {
+        width: 100px;
+        border: 1px solid #000;
+        background: #ddd;
+        margin: 10px;
+      }
+      .start {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .end {
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .center {
+        justify-content: center;
+        align-items: center;
+      }
+      .between {
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      .around {
+        justify-content: space-around;
+        align-items: baseline;
+      }
+      .evenly {
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex between">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex around">
+      <div><h1>1</h1></div>
+      <div><h6>2</h6></div>
+      <div><h3>3</h3></div>
+      <div><h4>4</h4></div>
+      <div><h2>5</h2></div>
+    </div>
+    <div class="flex evenly">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

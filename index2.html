@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .main {
+        width: 1001px;
+        height: 360px;
+        margin: 0 auto;
+      }
+      .main ul {
+        height: 70px;
+        background: #003466;
+      }
+      .main ul li {
+        position: relative;
+        float: left;
+        z-index: 1;
+      }
+      .main ul li a {
+        display: block;
+        color: #fff;
+        line-height: 70px;
+        padding: 0 20px;
+      }
+      .main ul li a:hover {
+        background: #f00;
+      }
+      .main ul li:first-child a {
+        background: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main">
+        <ul>
+          <li><a href="#">Information</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Clinic Test</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

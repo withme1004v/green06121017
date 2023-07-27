@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      div {
+        height: 100px;
+        /* background: url(images/photo1.jpg) left top/50px no-repeat,
+          url(images/photo2.jpg) right bottom/50px no-repeat,
+          url(images/photo3.jpg) center/50px no-repeat; */
+        background-image: url(images/photo1.jpg), url(images/photo2.jpg),
+          url(images/photo3.jpg);
+        background-position: left top, right bottom, center;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

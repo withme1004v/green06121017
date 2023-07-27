@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        border-radius: 50%;
+      }
+      .linear {
+        animation-timing-function: linear;
+      }
+      .ease {
+        animation-timing-function: ease;
+      }
+      .ease-in {
+        animation-timing-function: ease-in;
+      }
+      .ease-out {
+        animation-timing-function: ease-out;
+      }
+      .ease-in-out {
+        animation-timing-function: ease-in-out;
+      }
+      .cubic-bezer {
+        animation-timing-function: cubic-bezier(0.15, 1.04, 0.88, 0.37);
+      }
+      @keyframes move {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>animation-timing-function: linear</h2>
+    <div class="linear"></div>
+    <h2>animation-timing-function: ease</h2>
+    <div class="ease"></div>
+    <h2>animation-timing-function: ease-in</h2>
+    <div class="ease-in"></div>
+    <h2>animation-timing-function: ease-in-out</h2>
+    <div class="ease-in-out"></div>
+    <h2>animation-timing-function: ease-out</h2>
+    <div class="ease-out"></div>
+    <h2>animation-timing-function: cubic-bezier</h2>
+    <div class="cubic-bezier"></div>
+  </body>
+</html>

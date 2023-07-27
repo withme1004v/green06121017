@@ -1,0 +1,238 @@
+@charset "utf-8";
+@font-face {
+  font-family: applesd;
+  src: url(../webfonts/AppleSDGothicNeoR.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: applesd, Arial, sans-serif;
+}
+#wrapper {
+  position: relative;
+  height: 100vh;
+  min-height: 400px;
+}
+header {
+  height: 60px;
+  padding: 0 20px;
+}
+header .left {
+  float: left;
+}
+header .right {
+  float: right;
+}
+header ul li {
+  float: left;
+}
+header ul li a {
+  font-size: 14px;
+  line-height: 60px;
+  padding: 0 10px;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+header ul.right li:nth-child(3) a {
+  position: relative;
+  display: block;
+}
+header ul.right li:nth-child(3) a span {
+  display: block;
+  line-height: 60px;
+}
+header ul.right li:nth-child(3) a:hover {
+  text-decoration: none;
+}
+header ul.right li:nth-child(3) a::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+}
+header ul.right li:nth-child(3) a::after {
+  content: "Google 앱";
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #404040;
+  font-size: 13px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  left: -10px;
+  opacity: 0;
+}
+header ul.right li:nth-child(3) a:hover::before,
+header ul.right li:nth-child(3) a:hover::after {
+  opacity: 1;
+}
+header ul.right li:nth-child(3) a:hover::after {
+  transition-delay: 0.5s;
+}
+header ul.right li:last-child a {
+  background: #1a73e8;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+}
+header ul.right li:last-child a:hover {
+  background: #1b66c9;
+  text-decoration: none;
+}
+section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section .box span:nth-of-type(3) img {
+  width: 15px;
+}
+section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+section .box {
+  width: 600px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  border: 1px solid #dfe1e5;
+  padding: 0 10px;
+}
+section .box input {
+  width: 420px;
+  border: none;
+  margin-left: 10px;
+  margin-right: 15px;
+  padding: 5px;
+}
+:focus {
+  outline: none;
+}
+section .box span {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+  color: #202124;
+}
+section .box span img {
+  vertical-align: middle;
+}
+section .over {
+  position: relative;
+  cursor: pointer;
+}
+section .over:hover::before {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #000;
+  border-top: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+section .over:hover::after {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background: #000;
+  font: 12px applesd;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 30px;
+  padding: 0 10px;
+}
+section span:nth-of-type(2):hover::after {
+  content: "입력 도구";
+}
+section span:nth-of-type(3):hover::after {
+  content: "음성 검색";
+}
+section span:nth-of-type(4):hover::after {
+  content: "이미지로 검색";
+}
+section .box:hover {
+  box-shadow: 0 0 10px #eaeaea;
+}
+section .btn {
+  width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+section .btn input {
+  background: #f2f2f2;
+  height: 40px;
+  left: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+section .btn input:hover {
+  border-color: #ccc;
+  box-shadow: 0 0 5px #eaeaea;
+}
+section .btn input:last-child {
+  margin-left: 20px;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  background: #f2f2f2;
+}
+footer > div {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+}
+footer .bottom {
+  border-top: 1px solid #dadce0;
+  border-bottom: 1px solid #dadce0;
+}
+footer .bottom .left {
+  float: left;
+}
+footer .bottom .right {
+  float: right;
+}
+footer .bottom ul li {
+  float: left;
+}
+footer .bottom ul li a {
+  padding: 0 20px;
+}
+footer .bottom ul li:first-child a,
+footer .bottom ul li:last-child a {
+  padding: 0;
+}
+footer .bottom ul li a:hover {
+  text-decoration: underline;
+}

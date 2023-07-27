@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자모양</title>
+    <!-- 내부방식 -->
+    <style>
+      mark {
+        background-color: blue;
+      }
+      #first {
+        background-color: #f00;
+      }
+      .txt {
+        background-color: #ccc !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p><b>굵은글자</b></p>
+    <p><strong>굵은글자</strong></p>
+    <p><i>기울어진 글자</i></p>
+    <p><em>기울어진 글자</em></p>
+    <p><small>작은 글자</small></p>
+    <p>x<sup>2</sup></p>
+    <p>H<sub>2</sub>O</p>
+    <p><ins>밑줄문자</ins></p>
+    <p><del>취소선글자</del></p>
+    <!-- style 인라인방식 -->
+    <p>
+      <mark id="first" class="txt">first 하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark id="second" class="txt" style="background-color: rgb(227, 142, 22)"
+        >하이라이트된 글자</mark
+      >
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <p>
+      <mark style="background-color: rgb(227, 142, 22)">하이라이트된 글자</mark>
+    </p>
+    <!--blockquote에서 사용할수 있는 속성 cite:속성값(인용된 내용된 출처source를 명시함)-->
+    <blockquote cite="http://www.naver.com">
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they liv
+    </blockquote>
+    <p>
+      For 60 years, WWF has worked to help people and nature thrive. As the
+      world's leading conservation organization, WWF works in nearly 100
+      countries. At every level, we collaborate with people around the world to
+      develop and deliver innovative solutions that protect communities,
+      wildlife, and the places in which they liv
+    </p>
+    <p>네이버 논문:<q cite="http://www.naver.com">환경에 논문</q></p>
+    <p>
+      The <abbr title="World Health Organization">WHO</abbr> was founded in
+      1948.
+    </p>
+  </body>
+</html>

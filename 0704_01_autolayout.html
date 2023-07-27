@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoLayout & figma</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .col {
+        width: calc(180px * 4 + 60px);
+        margin: 0 auto;
+        overflow: hidden;
+        background: #ccc;
+      }
+      .col > div {
+        float: left;
+        margin-left: 20px;
+      }
+      .col > div:first-child {
+        margin-left: 0;
+      }
+      .user {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .title {
+        width: 180px;
+        height: 35px;
+        background: #e16aff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+        margin: 10px 0;
+      }
+      .title p {
+        line-height: 35px; /*글자와이미지 수직정렬*/
+      }
+      .title p:first-child {
+        float: left;
+        margin-left: 20px;
+      }
+      .title p:last-child {
+        float: right;
+        margin-right: 20px;
+      }
+      .title img {
+        vertical-align: middle;
+      }
+      .desc {
+        width: 180px;
+        font-size: 12px;
+        text-indent: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /*표시할 줄 수*/
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 20px;
+        line-height: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="col">
+        <div>
+          <p class="user"><img src="images/user.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.svg" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.svg" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.svg" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.svg" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+        <div>
+          <p class="user"><img src="images/user01.jpg" alt="user01" /></p>
+          <div class="title">
+            <p>List Title</p>
+            <p><img src="images/arrow.png" alt="arrow" /></p>
+          </div>
+          <p class="desc">
+            출판이나 사용하는 공간만 분야에서 사용된다. 때 공간만 같은 입숨을
+            문장 차지하는 보여줄 시각 때 실제적인 최종 사용할 차지하는 전에
+            그리킹이라고도 그리킹이라고도 입숨은 사용하는 부르며, 때 로렘
+            무언가를 이런 내용이 글로도 용도로 때로 모형의 그래픽 그래픽
+            분야에서 레이아웃 로렘
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

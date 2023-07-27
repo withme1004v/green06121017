@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      .wrap > div {
+        width: 10%;
+        height: 100px;
+        background: #ccc;
+        /*margin-left: 4%;*/
+        margin-left: calc((100% - (10% * 4)) / 3);
+        float: left;
+      }
+      .wrap > .one {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="one">one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+    </div>
+  </body>
+</html>

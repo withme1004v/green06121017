@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 1200px;
+        margin: 0 auto;
+        list-style: none;
+        height: 200px;
+      }
+      ul li {
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      ul li .box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        padding-top: 60px;
+        box-sizing: border-box;
+        transition: 1s;
+      }
+      ul li .box .title {
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      ul li:first-child .box {
+        left: 100%;
+      }
+      ul li:first-child:hover .box {
+        left: 0;
+      }
+      ul li:nth-child(2) .box {
+        top: -100%;
+      }
+      ul li:nth-child(2):hover .box {
+        top: 0;
+      }
+      ul li:nth-child(3) .box {
+        transform: scale(0);
+      }
+      ul li:nth-child(3):hover .box {
+        transform: scale(1);
+      }
+      ul li:nth-child(4) .box {
+        left: -100%;
+      }
+      ul li:nth-child(4):hover .box {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="images/photo1.jpg" alt="photo1" />
+        <div class="box">
+          <p class="title">이미지 제목</p>
+          <p class="desc">이미지 설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/photo2.jpg" alt="photo2" />
+        <div class="box">
+          <p class="title">이미지 제목</p>
+          <p class="desc">이미지 설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/photo3.jpg" alt="photo3" />
+        <div class="box">
+          <p class="title">이미지 제목</p>
+          <p class="desc">이미지 설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/photo4.jpg" alt="photo4" />
+        <div class="box">
+          <p class="title">이미지 제목</p>
+          <p class="desc">이미지 설명</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .menu > ul > li {
+        position: relative;
+        float: left;
+        width: 100px;
+        text-align: center;
+      }
+      .menu > ul > li > a {
+        display: block;
+        line-height: 50px;
+      }
+      .menu > ul > li a:hover,
+      .menu > ul > li:hover > a {
+        background: #ccc;
+      }
+      .menu li ul li a {
+        display: block;
+        line-height: 40px;
+        white-space: nowrap;
+      }
+      .menu > ul ul {
+        position: absolute;
+        width: 100%;
+        /* display: none; */
+        height: 0;
+        overflow: hidden;
+        transition-property: height;
+        transition-duration: 0.5s;
+      }
+      /* .menu > ul > li:hover ul {
+        display: block;
+      } */
+      .menu > ul > li:hover ul {
+        /* display: block; */
+        height: 160px;
+      }
+      .slide {
+        clear: both;
+        height: 300px;
+        background: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="#">메뉴1</a>
+          <ul>
+            <li><a href="#">서브메뉴서브메뉴서브메뉴</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴2</a>
+          <ul>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴3</a>
+          <ul>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴4</a>
+          <ul>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--menu end-->
+    <div class="slide"></div>
+  </body>
+</html>

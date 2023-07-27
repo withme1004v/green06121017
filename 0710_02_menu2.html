@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUST 쇼핑몰</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, Helvetica, 돋움, Dotum, sans-serif;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        height: 100px;
+      }
+      header .logo {
+        width: 200px;
+        float: left;
+      }
+      header nav {
+        width: 1000px;
+        float: left;
+      }
+      header nav .gnb {
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+      header nav .gnb > li {
+        width: 180px;
+        height: 50px;
+        float: left;
+        text-align: center;
+      }
+      header nav .gnb > li > a {
+        display: block;
+        line-height: 50px;
+        border: 1px solid #333;
+        border-left: none;
+      }
+      header nav .gnb > li:first-child > a {
+        border-left: 1px solid #333;
+      }
+      header nav .gnb .lnb {
+        position: relative;
+        /* display: none; */
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 999;
+      }
+      header nav .gnb > li:hover .lnb {
+        /* display: block; */
+        border-bottom: 1px solid #333;
+        height: 150px;
+        background: #fff;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+      }
+      header nav .gnb .lnb li a {
+        display: block;
+        line-height: 30px;
+      }
+      header nav .gnb > li:hover > a,
+      header nav .gnb > li a:hover {
+        background: #000;
+        color: #fff;
+      }
+      .slide {
+        height: 300px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="logo">로고</div>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">탑</a>
+              <ul class="lnb">
+                <li><a href="#">블라우스</a></li>
+                <li><a href="#">티</a></li>
+                <li><a href="#">셔츠</a></li>
+                <li><a href="#">니트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="lnb">
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">코트</a></li>
+                <li><a href="#">가디건</a></li>
+                <li><a href="#">머플러</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="lnb">
+                <li><a href="#">청바지</a></li>
+                <li><a href="#">짧은바지</a></li>
+                <li><a href="#">긴바지</a></li>
+                <li><a href="#">레깅스</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">악세사리</a>
+              <ul class="lnb">
+                <li><a href="#">귀고리</a></li>
+                <li><a href="#">목걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">팔찌</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="slide"><img src="images/photo1.jpg" alt="" /></div>
+    </div>
+  </body>
+</html>

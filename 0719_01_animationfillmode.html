@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: #8ac007;
+        margin: 10px;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-delay: 1s;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+          background: red;
+        }
+        100% {
+          transform: translateX(500px);
+          background: blue;
+        }
+      }
+      .none {
+        animation-fill-mode: none;
+      }
+      .forwards {
+        animation-fill-mode: forwards;
+      }
+      .backwards {
+        animation-fill-mode: backwards;
+      }
+      .both {
+        animation-fill-mode: both;
+      }
+      #play:checked ~ div {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="play" />
+    <label for="play">start/stop</label>
+    <div class="none">none</div>
+    <div class="forwards">forwards</div>
+    <div class="backwards">backwards</div>
+    <div class="both">both</div>
+  </body>
+</html>

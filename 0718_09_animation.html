@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.info {
+        width: 720px;
+        margin: 0 auto;
+        padding: 18px;
+      }
+      ul.info li {
+        float: left;
+        width: 25%;
+        cursor: pointer;
+        text-align: center;
+      }
+      li p:first-child {
+        font-size: 20px;
+        margin-bottom: 20px;
+        letter-spacing: -3px;
+      }
+      li p:last-child {
+        display: inline-block;
+        position: relative;
+        width: 142px;
+        height: 142px;
+      }
+      li:first-child p:last-child {
+        background-image: url(images/bg_info_m06.png);
+      }
+      li:nth-child(2) p:last-child {
+        background-image: url(images/bg_info_m02.png);
+      }
+      li:nth-child(3) p:last-child {
+        background-image: url(images/bg_info_m03.png);
+      }
+      li:nth-child(4) p:last-child {
+        background-image: url(images/bg_info_m04.png);
+      }
+      li p:last-child:hover {
+        background-position: 0 -240px;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-duration: alternate;
+      }
+      @keyframes bounce {
+        from,
+        to {
+          top: 0px;
+          animation-timing-function: ease-in;
+        }
+
+        50% {
+          top: 10px;
+          animation-timing-function: ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="info">
+      <li>
+        <p>대전청년포털</p>
+        <p></p>
+      </li>
+      <li>
+        <p>도시주택정보</p>
+        <p></p>
+      </li>
+      <li>
+        <p>동물보호센터</p>
+        <p></p>
+      </li>
+      <li>
+        <p>보건환경연구원</p>
+        <p></p>
+      </li>
+    </ul>
+  </body>
+</html>

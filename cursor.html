@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Mouse Pointer Animation</title>
+    <style>
+      body {
+        cursor: none;
+        border: 1px solid #000;
+      }
+
+      .custom-pointer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        animation: movePointer 2s infinite;
+      }
+
+      @keyframes movePointer {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-pointer"></div>
+
+    <h1>Welcome to my webpage</h1>
+    <p>This is a sample paragraph.</p>
+
+    <script>
+      document.addEventListener("mousemove", function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var pointer = document.querySelector(".custom-pointer");
+        pointer.style.left = x + "px";
+        pointer.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

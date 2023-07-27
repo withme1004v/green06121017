@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 100%;
+        /* height: 50px; */
+        overflow: hidden;
+        max-width: 1280px;
+        margin: 0 auto;
+        background: #ccc;
+        text-align: center;
+      }
+      .parent > div {
+        float: left;
+      }
+      .child {
+        width: 25%;
+        background: #000;
+        color: #fff;
+        text-align: left;
+      }
+      .left {
+        float: left;
+      }
+      .wrap .right {
+        clear: left;
+      }
+      .wrap1 {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--float 속성을 지정하면 부모의 높이값이 없어진다.
+    1. 부모의 높이를 지정 height:100px;
+    2. 부모의 overflow:hidden;
+    float 속성을 지정하면 다음요소가 끌려올라간다.
+    다음요소에 clear속성을 지정한다-->
+    <div class="parent">
+      <!-- 부모요소 -->
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <div class="child">자식요소</div>
+      <p class="child">자식요소</p>
+    </div>
+    <div class="wrap">
+      <div class="left">left</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="wrap1">
+      <div class="left">left</div>
+      <div class="right">right</div>
+      <div class="contents">contents</div>
+    </div>
+  </body>
+</html>

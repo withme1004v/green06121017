@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .happy {
+        width: calc(495px * 2);
+        margin: 0 auto;
+      }
+      .happy > div {
+        float: left;
+      }
+      .left {
+        width: 495px;
+      }
+      .happy h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .left ul {
+        width: 465px;
+        height: 306px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      .left ul li {
+        position: relative;
+        float: left;
+        width: calc(100% / 3);
+        height: 306px;
+        cursor: pointer;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .left ul li.first {
+        background: url(images/sample01.jpg);
+      }
+      .left ul li.second {
+        background: url(images/sample02.jpg);
+      }
+      .left ul li.third {
+        background: url(images/sample03.jpg);
+      }
+      .left .title {
+        color: #fff;
+        text-align: center;
+        line-height: 306px;
+        font-size: 20px;
+      }
+      .left .box {
+        position: absolute;
+        width: 300px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        left: 0;
+        top: 0;
+        padding-top: 120px;
+        /* left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        opacity: 0;
+      }
+      .left ul:hover .title {
+        display: none;
+      }
+      .left ul:hover li:hover {
+        width: 60%;
+      }
+      .left ul:hover li:not(:hover) {
+        width: 20%;
+      }
+      .left ul li:hover .box {
+        opacity: 1;
+      }
+      .right div {
+        width: 465px;
+        height: 306px;
+        background: url(images/beautytalk.jpg) center/100%;
+        margin: 0 auto;
+        text-align: center;
+        transition: 1s;
+        cursor: pointer;
+      }
+      .right div p {
+        color: #fff;
+        font-size: 20px;
+        padding-top: 100px;
+      }
+      .right div a {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        margin-top: 50px;
+        color: #fff;
+      }
+      .right div a:hover {
+        background: rgba(255, 255, 255, 0.5);
+        color: #333;
+      }
+      .right div:hover {
+        background-size: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="happy">
+      <div class="left">
+        <h2>해피바스 선물</h2>
+        <ul>
+          <li class="first">
+            <p class="title">내추럴 성분</p>
+            <div class="box">
+              <p>해피바스가 담고 있는<br />'내추럴 성분'이 궁금하다면?</p>
+            </div>
+          </li>
+          <li class="second">
+            <p class="title">풍성한 향</p>
+            <div class="box">
+              <p>해피바스가 펼쳐지는<br />'풍성한 향'이 궁금하다면?</p>
+            </div>
+          </li>
+          <li class="third">
+            <p class="title">즐거운 경험</p>
+            <div class="box">
+              <p>해피바스가 이끄는<br />'즐거운 경험'이 궁금하다면?</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <h2>해피바스 뷰티톡</h2>
+        <div>
+          <p>피부고민에 따른 뷰티팁을 드려요</p>
+          <a href="#">more</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

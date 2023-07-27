@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .col {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        margin: 5px auto;
+      }
+      .btn li {
+        position: absolute;
+        border: 1px solid #000;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #ccc;
+        box-sizing: border-box;
+        z-index: 10;
+      }
+      .btn li:first-child {
+        left: 0;
+        border-right: none;
+      }
+      .btn li:last-child {
+        left: 100px;
+      }
+      .con {
+        position: relative;
+        top: 39px;
+        width: 100%;
+        height: 150px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+      .con > li {
+        display: none;
+      }
+      .con table {
+        width: 90%;
+        margin: 0 auto;
+        table-layout: fixed;
+      }
+      .con table td:first-child {
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .con table td:last-child {
+        width: 30%;
+        text-align: center;
+      }
+      .con > li:last-child {
+        text-align: center;
+      }
+      .con > li:last-child li {
+        display: inline-block;
+        line-height: 150px;
+      }
+      .con > li:last-child li img {
+        width: 120px;
+        vertical-align: middle;
+      }
+      #notice:checked ~ .btn li:first-child,
+      #gallery:checked ~ .btn li:last-child {
+        border-bottom-color: rgba(0, 0, 0, 0);
+        background: #fff;
+      }
+      #notice:checked ~ .con > li:first-child {
+        display: block;
+      }
+      #gallery:checked ~ .con > li:last-child {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col">
+      <input type="radio" name="con" id="notice" checked />
+      <input type="radio" name="con" id="gallery" />
+      <ul class="btn">
+        <li><label for="notice">공지사항</label></li>
+        <li><label for="gallery">갤러리</label></li>
+      </ul>
+      <ul class="con">
+        <li>
+          <!--공지사항 시작-->
+          <table>
+            <tr>
+              <td><a href="">애스크로 서비스 변경 약관을 확인하세요</a></td>
+              <td>2019-10-10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="">배송 택배사 변경 및 배송방식 변경에 따른 공지</a>
+              </td>
+              <td>2019-10-10</td>
+            </tr>
+            <tr>
+              <td><a href="">여름 이월상품 정리 세일 안내</a></td>
+              <td>2019-10-10</td>
+            </tr>
+            <tr>
+              <td><a href="">여름 바캉스 상품 정리 세일 안내</a></td>
+              <td>2019-10-10</td>
+            </tr>
+            <tr>
+              <td><a href="">반품 및 교환 조건 변경 공지</a></td>
+              <td>2019-10-10</td>
+            </tr>
+            <tr>
+              <td><a href="">상품별 사이즈표 보는 방법과 치수 공지</a></td>
+              <td>2019-10-10</td>
+            </tr>
+          </table>
+        </li>
+        <!--공지사항 끝-->
+        <li>
+          <!--갤러리시작-->
+          <ul>
+            <li><img src="images/gallery01.gif" alt="gallery" /></li>
+            <li><img src="images/gallery02.gif" alt="gallery" /></li>
+            <li><img src="images/gallery03.gif" alt="gallery" /></li>
+          </ul>
+        </li>
+        <!--갤러리끝-->
+      </ul>
+    </div>
+  </body>
+</html>

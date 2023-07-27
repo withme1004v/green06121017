@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pr {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+      }
+      .pr .desc {
+        position: absolute;
+        left: 30px;
+        top: 40px;
+      }
+      .pr p:first-of-type {
+        font-size: 25px;
+      }
+      .pr p span {
+        font-weight: bold;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      svg rect {
+        /* x: 10px;
+        y: 10px; */
+        fill: none;
+        width: 300px;
+        height: 300px;
+        stroke: #000;
+        stroke-width: 10px;
+        stroke-linecap: square;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        transition: 1s;
+      }
+      svg:hover rect {
+        stroke-dashoffset: 0;
+      }
+      svg polyline {
+        transition: 0.5s;
+      }
+      svg:hover polyline {
+        transform: translateX(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pr">
+      <div class="desc">
+        <p>언론속의<br /><span>극동</span></p>
+        <p>언론에 소개되는 극동의 소식을<br />안내해드립니다</p>
+      </div>
+      <svg>
+        <g>
+          <rect />
+          <polyline points="40,280 100,280 80,265" fill="none" stroke="#000" />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>

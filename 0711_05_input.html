@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      p.title {
+        width: 500px;
+      }
+      label {
+        display: block;
+        width: calc(100% / 6);
+        height: 40px;
+        background: #9cc;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+      }
+      label:hover {
+        background: #669;
+      }
+      #one:checked ~ p label:first-child,
+      #two:checked ~ p label:nth-child(2),
+      #three:checked ~ p label:nth-child(3),
+      #four:checked ~ p label:nth-child(4),
+      #five:checked ~ p label:nth-child(5),
+      #six:checked ~ p label:nth-child(6) {
+        background: #699;
+      }
+      /* #two:checked ~ p label:nth-child(2) {
+        background: #699;
+      }
+      #three:checked ~ p label:nth-child(3) {
+        background: #699;
+      } */
+      img {
+        width: 500px;
+        height: 300px;
+        display: none;
+      }
+      #one:checked ~ p img:first-child,
+      #two:checked ~ p img:nth-child(2),
+      #three:checked ~ p img:nth-child(3),
+      #four:checked ~ p img:nth-child(4),
+      #five:checked ~ p img:nth-child(5),
+      #six:checked ~ p img:nth-child(6) {
+        display: block;
+      }
+      /* #two:checked ~ p img:nth-child(2) {
+        display: block;
+      }
+      #three:checked ~ p img:nth-child(3) {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="one" checked />
+    <input type="radio" name="photo" id="two" />
+    <input type="radio" name="photo" id="three" />
+    <input type="radio" name="photo" id="four" />
+    <input type="radio" name="photo" id="five" />
+    <input type="radio" name="photo" id="six" />
+
+    <p>
+      <img src="images/photo1.jpg" alt="photo1" />
+      <img src="images/photo2.jpg" alt="photo2" />
+      <img src="images/photo3.jpg" alt="photo3" />
+      <img src="images/photo4.jpg" alt="photo4" />
+      <img src="images/photo5.jpg" alt="photo5" />
+      <img src="images/photo6.jpg" alt="photo6" />
+    </p>
+    <p class="title">
+      <label for="one">photo1</label>
+      <label for="two">photo2</label>
+      <label for="three">photo3</label>
+      <label for="four">photo4</label>
+      <label for="five">photo5</label>
+      <label for="six">photo6</label>
+    </p>
+  </body>
+</html>

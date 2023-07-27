@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1280px;
+        margin: 0 auto;
+        background: #ccc;
+      }
+      .header {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      .content {
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      .content > div {
+        height: 500px;
+        float: left;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .nav {
+        width: 30%;
+      }
+      .section {
+        width: calc(50% - 40px); /*600px*/
+        margin: 0 20px;
+      }
+      .aside {
+        width: 20%;
+      }
+      .footer {
+        clear: both;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 20px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="header">header</div>
+      <div class="content">
+        <div class="nav">nav</div>
+        <div class="section">section</div>
+        <div class="aside">aside</div>
+      </div>
+      <!--content end-->
+      <div class="footer">footer</div>
+    </div>
+    <!--wrap end-->
+    <div id="wrap2">
+      <header>header</header>
+      <section>
+        <nav>nav</nav>
+        <article>article</article>
+        <aside>aside</aside>
+      </section>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

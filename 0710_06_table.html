@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      @font-face {
+        font-family: notokr;
+        src: url(webfonts/NotoSansKR-Medium.otf) format("otf");
+      }
+      body {
+        font-family: Arial, notokr, sans-serif;
+      }
+      .col {
+        width: 400px;
+      }
+      table {
+        table-layout: fixed;
+        width: 100%;
+        font: 14px notokr;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #aaa;
+        padding: 20px;
+        border-left: none;
+        border-right: none;
+      }
+      td:first-child {
+        background: #efefef;
+        text-align: center;
+        width: 100px;
+        font-weight: bold;
+      }
+      td:last-child {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      tr:first-child td {
+        border-top: 2px solid #484848;
+      }
+      td p {
+        padding-top: 30px;
+        letter-spacing: -1px;
+      }
+      td p span {
+        color: blue;
+        font-weight: bold;
+      }
+      td p:first-child {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col">
+      <table>
+        <tr>
+          <td>교육대상</td>
+          <td>교육대상</td>
+        </tr>
+        <tr>
+          <td>지점</td>
+          <td>지점</td>
+        </tr>
+        <tr>
+          <td>이름</td>
+          <td>이름</td>
+        </tr>
+        <tr>
+          <td>연락처</td>
+          <td>연락처</td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td>이메일</td>
+        </tr>
+        <tr>
+          <td>희망과정</td>
+          <td>희망과정</td>
+        </tr>
+        <tr>
+          <td>상담내용</td>
+          <td>상담내용</td>
+        </tr>
+        <tr>
+          <td>개인정보 수집 및 이용동의</td>
+          <td>
+            (주)지아이티아카데미는 온라인상담을 이용하기 원하는 분을 대상으로
+            아래와 같이 개인정보를 수집하고 있습니다.<br />
+            (주)지아이티아카데미는 온라인상담을 이용하기 원하는 분을 대상으로
+            아래와 같이 개인정보를 수집하고 있습니다.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

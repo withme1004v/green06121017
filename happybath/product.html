@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .product {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .product h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .product .review .box {
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+      }
+      .product .review .box .picture {
+        background: #ddd;
+        an
+      }
+      .product .review .box .desc {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+      }
+      .product .review .box .desc .star {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+      }
+      .product .news .box {
+        width: 285px;
+        height: 250px;
+        background: url(images/news1.jpg) no-repeat;
+        animation: news 2s infinite both;
+        border: 1px solid transparent;
+      }
+      @keyframes news {
+        0% {
+          background: url(images/news1.jpg);
+        }
+        100% {
+          background: url(images/news2.jpg);
+        }
+      }
+      .product .box:hover {
+        border-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="review">
+        <h2>제품리뷰</h2>
+        <div class="box">
+          <div class="picture">
+            <img src="images/review1.png" alt="review1" />
+          </div>
+          <div class="desc">
+            <p>[오리지널컬렉션 체리블로섬 바디워시]</p>
+            <p class="star">
+              <span>flrr</span>
+              <span><img src="images/star.png" alt="별" /></span>
+            </p>
+            <p>
+              정말 오랜만에 향기도 좋고 성분도 착한 바디워시를 만났어요!
+              마일드한 세정력도 좋고 저자극의 바디워시입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <h2>해피바스 새소식</h2>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Menu</title>
+    <style>
+      .over {
+        display: inline-block;
+        cursor: pointer;
+        /* text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 5px;
+        text-decoration-color: cadetblue; */
+        border-bottom: 1px dotted cadetblue;
+      }
+      .over_me {
+        position: relative;
+        left: -120px;
+        top: 30px;
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 5px 20px;
+        border-radius: 5px;
+        visibility: hidden;
+      }
+      .over:hover ~ .over_me {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="over">Mouse over me</p>
+    <p class="over_me">Tooltip text</p>
+  </body>
+</html>

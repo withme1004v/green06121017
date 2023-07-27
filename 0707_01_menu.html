@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .gnb {
+        padding-bottom: 500px;
+      }
+      .gnb > li {
+        position: relative;
+        width: 100px;
+        background: #ccc;
+        float: left;
+        text-align: center;
+      }
+      .gnb > li:first-child {
+        width: 200px;
+      }
+      .gnb > li > a {
+        display: block;
+        line-height: 40px;
+      }
+      .gnb > li > a:hover {
+        background: #ddd;
+      }
+      .gnb1 {
+        clear: both;
+      }
+      .gnb1 > li {
+        position: relative;
+        float: left;
+        background-color: bisque;
+      }
+      .gnb1 > li > a {
+        display: block;
+        padding: 0 20px;
+        line-height: 40px;
+      }
+      .gnb1 > li > a:hover {
+        background-color: beige;
+      }
+      .lnb {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        z-index: 999;
+        background-color: aqua;
+      }
+      .gnb .lnb {
+        width: 100%;
+      }
+      .gnb1 .lnb li a {
+        padding: 0 20px;
+        line-height: 30px;
+        white-space: nowrap;
+      }
+      .gnb > li:hover .lnb,
+      .gnb1 > li:hover .lnb {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb">
+      <li>
+        <a href="#">menu1menu2menu3</a>
+        <ul class="lnb">
+          <li><a href="#">submenu11111111dddddddddddddddddddd</a></li>
+          <li><a href="#">submenu2</a></li>
+          <li><a href="#">submenu3</a></li>
+          <li><a href="#">submenu4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+    <ul class="gnb1">
+      <li>
+        <a href="#">menu1menu2menu555555555555555</a>
+        <ul class="lnb">
+          <li><a href="#">서브메뉴서브메뉴서브메뉴서브메뉴서브메뉴</a></li>
+          <li><a href="#">서브메뉴2</a></li>
+          <li><a href="#">서브메뉴3</a></li>
+          <li><a href="#">서브메뉴4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </body>
+</html>

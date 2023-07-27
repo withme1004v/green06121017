@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .banner {
+        text-align: center;
+      }
+      p {
+        width: 0;
+        height: 0;
+        border: 10px solid #000;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        margin: 50px auto;
+        animation: move 0.5s linear alternate infinite;
+      }
+      label {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-radius: 50px;
+      }
+      #start:checked ~ label:first-of-type,
+      #stop:checked ~ label:last-of-type {
+        background: #000;
+        color: #fff;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(5px);
+        }
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <input type="radio" name="tri" id="start" checked />
+      <input type="radio" name="tri" id="stop" />
+      <p></p>
+      <label for="start">start</label>
+      <label for="stop">stop</label>
+    </div>
+  </body>
+</html>

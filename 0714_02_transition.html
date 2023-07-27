@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        position: relative;
+        cursor: pointer;
+        left: 0;
+      }
+      #menu:checked ~ label {
+        left: 500px;
+        transition: 0.5s;
+      }
+      label span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #000;
+        margin: 6px 0;
+        transition: transform 0.2s ease-in;
+      }
+      #menu:checked ~ .menu01 .bar1 {
+        transform: translate(0, 11px) rotate(45deg);
+      }
+      #menu:checked ~ .menu01 .bar2 {
+        opacity: 0;
+      }
+      #menu:checked ~ .menu01 .bar3 {
+        transform: translate(0, -11px) rotate(-45deg);
+      }
+      .box {
+        position: fixed;
+        width: 500px;
+        height: 100%;
+        left: -500px;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: left 0.5s ease-in-out;
+        z-index: -1;
+      }
+      #menu:checked ~ .box {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="menu" />
+    <label for="menu" class="menu01">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </label>
+    <div class="box"></div>
+  </body>
+</html>

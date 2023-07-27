@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        width: 500px;
+        height: 200px;
+        background: #f0f0f0;
+        text-align: center;
+        /* display: table-cell;
+        vertical-align: middle; */
+        position: relative;
+      }
+      .contents {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .line {
+        position: absolute;
+        background: #07348c;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: transform 1s ease-in-out 3s;
+      }
+      ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: transform 1s ease-in-out;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0%;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: transform 1s ease-in-out 2s;
+      }
+      ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: transform 1s ease-in-out 1s;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: transform 1s ease-in-out 1s;
+      }
+      ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: transform 1s ease-in-out 2s;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0%;
+        transform: scaleY(0);
+        transform-origin: 0 100%;
+        transition: transform 1s ease-in-out;
+      }
+      ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: transform 1s ease-in-out 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="contents">
+          <h1>메인배너</h1>
+          <h2>border Transition</h2>
+        </div>
+        <span class="line line-top"></span>
+        <span class="line line-right"></span>
+        <span class="line line-bottom"></span>
+        <span class="line line-left"></span>
+      </li>
+    </ul>
+  </body>
+</html>

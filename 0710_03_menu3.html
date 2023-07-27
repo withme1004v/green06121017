@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUST 쇼핑몰</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, Helvetica, 돋움, Dotum, sans-serif;
+      }
+      #wrap {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        height: 100px;
+      }
+      header .logo {
+        width: 200px;
+        float: left;
+      }
+      header nav {
+        width: 1000px;
+        float: left;
+      }
+      header nav .gnb {
+        float: right;
+        margin-top: 50px;
+        margin-right: 20px;
+      }
+      header nav .gnb > li {
+        position: relative;
+        width: 180px;
+        height: 50px;
+        float: left;
+        text-align: center;
+      }
+      header nav .gnb > li > a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #333;
+        border-left: none;
+        box-sizing: border-box;
+      }
+      header nav .gnb > li:first-child > a {
+        border-left: 1px solid #333;
+      }
+      header nav .gnb .lnb {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 999;
+        background: #000;
+      }
+      header nav .gnb:hover .lnb {
+        height: 150px;
+      }
+      header nav .gnb .lnb li a {
+        display: block;
+        line-height: 30px;
+        color: #fff;
+      }
+      header nav .gnb > li:hover > a {
+        background: #000;
+        color: #fff;
+      }
+      header nav .lnb li a:hover {
+        background: #fff;
+        color: #000;
+      }
+      .bg {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 1200px;
+        height: 0;
+        background: #000;
+        transition: 0.5s;
+      }
+      header .gnb:hover ~ .bg {
+        height: 150px;
+      }
+      .slide {
+        height: 300px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="logo">로고</div>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">탑</a>
+              <ul class="lnb">
+                <li><a href="#">블라우스</a></li>
+                <li><a href="#">티</a></li>
+                <li><a href="#">셔츠</a></li>
+                <li><a href="#">니트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="lnb">
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">코트</a></li>
+                <li><a href="#">가디건</a></li>
+                <li><a href="#">머플러</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="lnb">
+                <li><a href="#">청바지</a></li>
+                <li><a href="#">짧은바지</a></li>
+                <li><a href="#">긴바지</a></li>
+                <li><a href="#">레깅스</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">악세사리</a>
+              <ul class="lnb">
+                <li><a href="#">귀고리</a></li>
+                <li><a href="#">목걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">팔찌</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </nav>
+      </header>
+      <div class="slide"><img src="images/photo1.jpg" alt="" /></div>
+    </div>
+  </body>
+</html>

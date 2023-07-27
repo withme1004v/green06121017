@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object-fit</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      .div01 {
+        /* transform: translate(100px, -50px); */
+        transform: translateX(200px);
+      }
+      .div02 {
+        /* transform: scale(0.5, 1); */
+        transform: scaleX(2);
+      }
+      .div03 {
+        transform: rotate(-30deg);
+      }
+      .div04 {
+        /* transform: skew(10deg, 20deg); */
+        transform: skewY(-10deg);
+      }
+      p {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        background: #f00;
+        transform: translate(-50%, -50%) scale(2) skew(10deg) rotate(20deg);
+      }
+      section {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+      section:hover img {
+        transform: scale(2);
+        transition: 0.5s;
+      }
+      article {
+        width: 100px;
+        height: 100px;
+        background: green;
+        /* transition-property: width, height;
+        transition-duration: 0.5s, 1s;
+        transition-timing-function: ease;
+        transition-delay: 1s; */
+        transition: width 0.5s, height 1s;
+      }
+      article:hover {
+        width: 200px;
+        height: 300px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div01"></div>
+    <div class="div02"></div>
+    <div class="div03"></div>
+    <div class="div04"></div>
+    <div class="div05">
+      <p></p>
+    </div>
+    <section><img src="images/photo2.jpg" alt="photo2" /></section>
+    <article></article>
+  </body>
+</html>

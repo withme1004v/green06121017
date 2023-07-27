@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      p {
+        width: 500px;
+        height: 500px;
+        border: 20px solid rgba(0, 0, 0, 0.5);
+        padding: 50px;
+        background-image: url(images/photo1.jpg);
+        background-repeat: no-repeat;
+      }
+      p:first-child {
+        background-origin: border-box;
+      }
+      p:nth-child(2) {
+        background-origin: padding-box;
+      }
+      p:nth-child(3) {
+        background-origin: content-box;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: #0f0;
+        border: 20px solid rgba(255, 0, 0, 0.5);
+        padding: 50px;
+      }
+      div:first-of-type {
+        background-clip: border-box;
+      }
+      div:nth-of-type(2) {
+        background-clip: padding-box;
+      }
+      div:nth-of-type(3) {
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>

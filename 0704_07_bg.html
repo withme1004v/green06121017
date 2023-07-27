@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #ccc;
+      }
+      .head {
+        border-bottom: 1px solid #000;
+      }
+      .top,
+      .bottom {
+        width: 1280px;
+        height: 100px;
+        background: #ddd;
+        margin: 0 auto;
+      }
+      .foot {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border-top: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="head">
+        <div class="top"></div>
+      </div>
+      <div class="foot">
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

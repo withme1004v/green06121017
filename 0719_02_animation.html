@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        text-align: center;
+      }
+      .box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+      }
+      .box li {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .box .pipe {
+        background: url(images/pipe.png);
+      }
+      .box .pro {
+        background: url(images/propeller.png);
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+        border-radius: 50px;
+        border: 1px solid #000;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+      @keyframes left {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-1080deg);
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(1080deg);
+        }
+      }
+      #left:checked ~ .box .pro {
+        animation-name: left;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      #right:checked ~ .box .pro {
+        animation: right 2s linear infinite;
+      }
+      #off:checked ~ .box .pro {
+        animation-play-state: paused;
+      }
+      #left:checked ~ label:first-of-type,
+      #right:checked ~ label:nth-of-type(2),
+      #off:checked ~ label:nth-of-type(3) {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="btn" id="left" checked />
+    <input type="radio" name="btn" id="right" />
+    <input type="radio" name="btn" id="off" />
+    <ul class="box">
+      <li class="pipe"></li>
+      <li class="pro"></li>
+    </ul>
+    <label for="left">Turn left</label>
+    <label for="right">Turn right</label>
+    <label for="off">off</label>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure CSS 2Depth Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+        padding: 50px;
+      }
+      #top {
+        width: 960px;
+        margin: 0 auto;
+      }
+      nav {
+        width: 100%;
+      }
+      ul.gnb {
+        background: #5f5f5f;
+        height: 50px;
+      }
+      ul.gnb > li {
+        position: relative;
+        float: left;
+        width: 20%;
+      }
+      ul.gnb > li > a {
+        display: block;
+        color: #f5f5f5;
+        line-height: 50px;
+        text-align: center;
+      }
+      ul.gnb > li:hover > a,
+      ul.gnb > li > a:hover {
+        background: #8ac007;
+      }
+      ul.lnb {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        background: #f1f1f1;
+        z-index: 10;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.lnb li a {
+        display: block;
+        color: #555;
+        line-height: 30px;
+        /* text-align: center; */
+        padding-left: 20px;
+      }
+      ul.lnb li a:hover {
+        background: #ddd;
+      }
+      ul.gnb:hover ul.lnb {
+        height: 210px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <h1>Pure CSS 2Depth Menu</h1>
+      <nav>
+        <ul class="gnb">
+          <li>
+            <a href="#">HTML이란 무엇인가?</a>
+            <ul class="lnb">
+              <li><a href="#">HTML Forms</a></li>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">HTML Graphics</a></li>
+              <li><a href="#">HTML Media</a></li>
+              <li><a href="#">HTML APIs</a></li>
+              <li><a href="#">HTML Examples</a></li>
+              <li><a href="#">HTML References</a></li>
+            </ul>
+            <!--lnb end-->
+          </li>
+          <li>
+            <a href="#">CSS & CSS3</a>
+            <ul class="lnb">
+              <li><a href="#">CSS3</a></li>
+              <li><a href="#">CSS Resonsive</a></li>
+              <li><a href="#">CSS Examples</a></li>
+              <li><a href="#">CSS References</a></li>
+            </ul>
+            <!--lnb end-->
+          </li>
+          <li>
+            <a href="#">JAVASCRIPT</a>
+            <ul class="lnb">
+              <li><a href="#">JS Forms</a></li>
+              <li><a href="#">JS Objects</a></li>
+              <li><a href="#">JS Functions</a></li>
+              <li><a href="#">JS HTML DOM</a></li>
+              <li><a href="#">JS Examples</a></li>
+              <li><a href="#">JS References</a></li>
+            </ul>
+            <!--lnb end-->
+          </li>
+          <li>
+            <a href="#">JQUERY</a>
+            <ul class="lnb">
+              <li><a href="#">jQuery Effects</a></li>
+              <li><a href="#">jQuery HTML</a></li>
+              <li><a href="#">jQuery Traversing</a></li>
+              <li><a href="#">jQuery AJAX</a></li>
+              <li><a href="#">jQuery Examples</a></li>
+              <li><a href="#">jQuery References</a></li>
+            </ul>
+            <!--lnb end-->
+          </li>
+          <li>
+            <a href="#">TUTORIAL</a>
+            <ul class="lnb">
+              <li><a href="#">HTML/CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Graphics</a></li>
+              <li><a href="#">Web</a></li>
+              <li><a href="#">XML</a></li>
+            </ul>
+            <!--lnb end-->
+          </li>
+        </ul>
+        <!--gnb end-->
+      </nav>
+      <div><img src="images/photo1.jpg" alt="" /></div>
+    </div>
+  </body>
+</html>

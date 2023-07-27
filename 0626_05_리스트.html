@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body > ul {
+        list-style: upper-roman;
+      }
+      body > ul > li > ul {
+        list-style: disc;
+      }
+      ul li {
+        border: 1px solid #000;
+      }
+      /* ul.second .list + li {
+        color: #f00;
+      } */
+      ul.second .list ~ li {
+        color: #f00;
+      }
+      .list2 {
+        color: #0f0 !important;
+      }
+      ul,
+      p {
+        background-color: beige;
+      }
+      p {
+        /* margin: 10px 20px 30px 40px; */
+        /* margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 30px; */
+        /* margin: 10px 20px 30px; */
+        margin: 10px 20px;
+        padding: 50px;
+      }
+      dd {
+        margin: 0px 0px 0px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <ul>
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+      <li>
+        <ul class="second">
+          <li class="list">리스트1</li>
+          <li class="list2">리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ul>
+      </li>
+    </ul>
+    <p>문단태그</p>
+    <dl>
+      <dt>coffee</dt>
+      <dd>black hot drink</dd>
+      <dd>black ice drink</dd>
+      <dt>milk</dt>
+      <dd>white cold drink</dd>
+    </dl>
+  </body>
+</html>

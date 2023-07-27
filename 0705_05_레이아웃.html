@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header,
+      footer {
+        height: 100px;
+      }
+      header .logo {
+        width: 200px;
+        background: #aaa;
+      }
+      header nav {
+        width: 1000px;
+        background: #bbb;
+      }
+      header .logo,
+      header nav {
+        float: left;
+        height: 100%;
+      }
+      section.slide {
+        height: 300px;
+        background: #ccc;
+      }
+      section.content {
+        height: 100px;
+      }
+      article.content {
+        height: 200px;
+      }
+      article.content > section {
+        float: left;
+        width: 33.333%;
+        height: 100%;
+      }
+      article.content > section:first-child {
+        background: #ddd;
+      }
+      article.content > section:nth-child(2) {
+        background: #eee;
+      }
+      article.content > section:nth-child(3) {
+        background: #ddd;
+      }
+      footer > div {
+        float: left;
+        height: 100%;
+      }
+      footer .logo {
+        width: 200px;
+        background: #ccc;
+      }
+      footer .copyright {
+        width: 800px;
+        background: #bbb;
+      }
+      footer .sns {
+        width: 200px;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="logo">로고</div>
+        <nav>메뉴</nav>
+      </header>
+      <section class="slide">이미지 슬라이드</section>
+      <article class="content">
+        <section>공지사항/갤러리</section>
+        <section>배너</section>
+        <section>바로가기</section>
+      </article>
+      <footer>
+        <div class="logo">로고</div>
+        <div class="copyright"><address>대전시 서구 둔산동</address></div>
+        <div class="sns">sns</div>
+      </footer>
+    </div>
+  </body>
+</html>

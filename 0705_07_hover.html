@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Menu</title>
+    <style>
+      .in {
+        display: none;
+      }
+      .out:hover .in,
+      .out:hover ~ .in {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      out
+      <div class="in">in</div>
+    </div>
+    <div class="out">out</div>
+    <div class="in">in</div>
+  </body>
+</html>

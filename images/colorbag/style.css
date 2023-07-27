@@ -1,0 +1,149 @@
+@charset "utf-8";
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+}
+.clearfix::after {
+  clear: both;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Arial, "맑은 고딕", sans-serif;
+}
+.top {
+  width: 999px;
+  margin: 20px auto;
+  text-align: center;
+}
+.top ul {
+  width: 242px;
+  margin: 0 auto;
+}
+.top ul li {
+  float: left;
+}
+nav {
+  background: #425b71;
+  height: 33px;
+}
+nav ul {
+  width: 999px;
+  margin: 0 auto;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a::after {
+  content: url(images/color_topmenuline.jpg);
+}
+nav ul li:last-child a::after {
+  content: "";
+}
+input {
+  display: none;
+}
+.main_visual {
+  width: 999px;
+  margin: 20px auto;
+}
+.main_visual ul.visual {
+  height: 377px;
+}
+.main_visual ul.visual li {
+  display: none;
+}
+#bag1:checked ~ .main_visual ul.visual li:first-child,
+#bag2:checked ~ .main_visual ul.visual li:nth-child(2),
+#bag3:checked ~ .main_visual ul.visual li:nth-child(3) {
+  display: block;
+}
+ul.btn li {
+  float: left;
+  width: 33.333%;
+  background: #9cc;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+ul.btn li label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+#bag1:checked ~ .main_visual ul.btn li:first-child,
+#bag2:checked ~ .main_visual ul.btn li:nth-child(2),
+#bag3:checked ~ .main_visual ul.btn li:last-child {
+  background: #699;
+}
+ul.btn li:hover {
+  background: #ccc;
+}
+.product {
+  width: 999px;
+  margin: 0 auto;
+}
+.product ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+}
+.notice {
+  width: 999px;
+  margin: 20px auto;
+}
+.notice > ul > li {
+  float: left;
+  width: 33.333%;
+  font-size: 14px;
+}
+.notice > ul > li:first-child li:first-child {
+  margin-bottom: 20px;
+}
+.notice > ul > li:nth-child(2) li {
+  float: left;
+  cursor: pointer;
+}
+.notice > ul > li:nth-child(2) li:first-child:hover {
+  content: url(images/csbanner_over.jpg);
+}
+.notice > ul > li:nth-child(2) li:nth-child(2):hover {
+  content: url(images/csbanner_over-02.jpg);
+}
+.notice > ul > li:nth-child(2) li:last-child:hover {
+  content: url(images/csbanner_over-03.jpg);
+}
+.foot_top {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.foot_top ul {
+  width: 999px;
+  margin: 0 auto;
+}
+.foot_top ul li {
+  float: left;
+}
+.foot_top ul li a {
+  color: #333;
+  font-size: 14px;
+  line-height: 30px;
+  margin-right: 20px;
+}
+.foot_bottom {
+  width: 999px;
+  margin: 20px auto;
+  font-size: 14px;
+}

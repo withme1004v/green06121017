@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1[class] {
+        color: #f00;
+      }
+      img[alt] {
+        width: 200px;
+      }
+      /* p[class="abc"] {
+        color: #0f0;
+      } */
+      /* p[class~="abc"] {
+        color: #0f0;
+      } */
+      /* p[class|="abc"] {
+        color: #0f0;
+      } */
+      p[class^="abc"] {
+        color: #0f0;
+      }
+      /* p[class$="abc"] {
+        color: #0f0;
+      } */
+      /* p[class*="abc"] {
+        color: #0f0;
+      } */
+      a[href^="mailto"] {
+        color: #ccc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title box">제목태그</h1>
+    <!--.title또는 .box또는 .title.box-->
+    <h1 class="title circle">제목태그</h1>
+    <h1 class="title">class명을 가진 h1요소</h1>
+    <h1>제목태그</h1>
+    <img src="images/menu1.jpg" alt="menu1" />
+    <img src="images/menu1.jpg" />
+    <p class="abc">class명이 유일하게 abc인 p요소</p>
+    <p class="abc title">
+      <!--.abc또는 .title또는 .abc.title-->
+      class명이 유일하게 abc이거나 여러 개의 class명 중 하나가 abc인 p요소
+    </p>
+    <p class="abctitle">class명이 유일하게abc이거나 abc로 시작하는 p요소</p>
+    <!--.abctitle-->
+    <p class="abc-title">class명이 abc로 시작하는 p요소</p>
+    <p class="titleabc">class명이 abc로 끝나는 p요소</p>
+    <p class="tabcitle">class명이 abc가 포함되어 있는 p요소</p>
+    <a href="#">링크태그</a>
+    <a href="mailto:id@naver.com">링크태그</a>
+  </body>
+</html>

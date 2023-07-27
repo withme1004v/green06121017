@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        border: 1px solid #000;
+        width: 300px;
+        height: 300px;
+
+        stroke-linecap: square;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 0;
+
+        /* transform: rotate(-90deg); */
+      }
+      svg:first-child {
+        stroke: #000;
+        stroke-width: 10px;
+        animation: ani 1s forwards;
+      }
+      @keyframes ani {
+        0% {
+          stroke-dashoffset: 800;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      img {
+        transform: scale(10);
+      }
+      svg:nth-of-type(2) path {
+        transform: scale(10);
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <rect x="10" y="10" width="200" height="200" fill="none" />
+    </svg>
+    <img src="images/mics1.svg" alt="" />
+    <svg>
+      <path
+        fill="#000"
+        class="cls-1"
+        d="M0,38v-3H10.4v-5.2h-.75c-2.7,0-4.98-.93-6.85-2.8-1.87-1.87-2.8-4.15-2.8-6.85,0-2.03,.58-3.88,1.75-5.55,1.17-1.67,2.7-2.83,4.6-3.5,.13-1.33,.72-2.42,1.75-3.25s2.23-1.2,3.6-1.1l-1.05-2.95,2.05-.73-.7-1.87,3.3-1.2,.7,1.85,2-.7,5.65,14.75-2.15,.75,.7,1.85-3.2,1.15-.7-1.85-2.15,.8-1.25-3.4c-.5,.57-1.09,.98-1.78,1.23s-1.41,.36-2.19,.33c-.86-.03-1.65-.3-2.38-.8s-1.32-1.13-1.75-1.9c-1.17,.57-2.09,1.4-2.78,2.5s-1.03,2.3-1.03,3.6c0,1.85,.65,3.42,1.94,4.71,1.29,1.29,2.86,1.94,4.71,1.94H27v3H15.4v5.2h12.6v3H0ZM17.8,15.4l2.65-.95-4-10.3-2.65,.95,4,10.3Zm-6.51-1.15c.71,0,1.3-.24,1.78-.72,.48-.48,.73-1.07,.73-1.78s-.24-1.3-.72-1.78c-.48-.48-1.07-.73-1.78-.73s-1.3,.24-1.78,.72c-.48,.48-.73,1.07-.73,1.78s.24,1.3,.72,1.78c.48,.48,1.07,.73,1.78,.73Z"
+      />
+    </svg>
+    <svg>
+      <polygon
+        class="cls-1"
+        points="37.06 0 8.03 0 0 8.03 0 19.39 8.03 27.42 37.06 27.42 45.1 19.39 45.1 8.03 37.06 0"
+      />
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "나눔 고딕", sans-serif;
+      }
+      .head {
+        position: relative;
+        width: 990px;
+        height: 95px;
+        margin: 0 auto;
+        text-align: center;
+        background: #ccc;
+      }
+      .head ul {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .head ul li {
+        float: left;
+        margin-left: 20px;
+      }
+      nav {
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid #000;
+      }
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        background: #ddd;
+      }
+      nav ul li a {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="head">
+          <div class="top">
+            <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">구매하기</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li>
+                <a href="#"
+                  ><span class="material-symbols-outlined"> search </span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">해피바스 이야기</a></li>
+            <li><a href="#">해피바스 선물</a></li>
+            <li><a href="#">해피바스 뷰티톡</a></li>
+            <li><a href="#">해피바스 제품</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>

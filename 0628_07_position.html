@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        position: relative;
+        left: 200px;
+        top: 200px;
+        padding-bottom: 2000px;
+      }
+      .wrap div:first-child {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        opacity: 0.5;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>fixed1</div>
+      <div>fixed2</div>
+      <div>fixed3</div>
+      <div>fixed4</div>
+    </div>
+  </body>
+</html>

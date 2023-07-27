@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        color: #ccc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-decoration-color: #333;
+        text-underline-offset: 10px;
+      }
+      #new1,
+      span,
+      h1,
+      #new2,
+      .design {
+        display: none;
+      }
+      #new1:target,
+      #new2:target,
+      #new1:target ~ span,
+      #new2:target ~ p,
+      #new1:target h1 {
+        display: block;
+      }
+      :target + p {
+        background: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="html5">
+      <a href="#new1">jump to new content1</a>
+      <p id="new1">Html5</p>
+      <span>하나</span>
+    </div>
+    <h1>h1태그입니다.</h1>
+    <a href="#new2">jump to new content2</a>
+    <p id="new2">css</p>
+    <p class="design">디자인서식입니다.</p>
+    <p class="design">디자인서식입니다.</p>
+    <p class="design">디자인서식입니다.</p>
+    <p class="design">디자인서식입니다.</p>
+    <p class="design">디자인서식입니다.</p>
+  </body>
+</html>

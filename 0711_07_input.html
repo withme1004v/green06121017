@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      .tabcon {
+        padding: 50px 0;
+        text-align: center;
+        display: none;
+      }
+      label {
+        float: left;
+        width: 25%;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+      div:first-of-type,
+      label:first-of-type {
+        background: red;
+      }
+      div:nth-of-type(2),
+      label:nth-of-type(2) {
+        background: green;
+      }
+      div:nth-of-type(3),
+      label:nth-of-type(3) {
+        background: blue;
+      }
+      div:nth-of-type(4),
+      label:nth-of-type(4) {
+        background: yellow;
+      }
+      #one:checked ~ div.tabcon:first-of-type,
+      #two:checked ~ div.tabcon:nth-of-type(2),
+      #three:checked ~ div.tabcon:nth-of-type(3),
+      #four:checked ~ div.tabcon:nth-of-type(4) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="con" id="one" checked />
+    <input type="radio" name="con" id="two" />
+    <input type="radio" name="con" id="three" />
+    <input type="radio" name="con" id="four" />
+    <div class="tabcon"><h1>content1</h1></div>
+    <div class="tabcon"><h1>content2</h1></div>
+    <div class="tabcon"><h1>content3</h1></div>
+    <div class="tabcon"><h1>content4</h1></div>
+    <label for="one">content1</label>
+    <label for="two">content2</label>
+    <label for="three">content3</label>
+    <label for="four">content4</label>
+  </body>
+</html>

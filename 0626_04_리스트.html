@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트태그</title>
+    <style>
+      ol.child {
+        list-style: upper-roman;
+      }
+      ol.first {
+        list-style: upper-roman;
+      }
+      ol.second {
+        list-style-image: url(images/ico_bbslist.gif);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>발&nbsp;표 회</h1>
+    <ul>
+      <li>
+        <ol>
+          <li>햇님반</li>
+          <li>별님반</li>
+          <li>달님반</li>
+          <li>꽃님반</li>
+        </ol>
+      </li>
+      <li>햇님반 주제 노래 합창</li>
+      <li>별님반 주제 노래 합창</li>
+      <li>달님반 주제 노래 합창</li>
+      <li>꽃님반 주제 노래 합창</li>
+    </ul>
+    <h1>발 표 회</h1>
+    <ol class="child">
+      <li>
+        참가팀 순서
+        <ul class="child01">
+          <li>햇님반</li>
+          <li>별님반</li>
+          <li>달님반</li>
+          <li>꽃님반</li>
+        </ul>
+      </li>
+      <li>햇님반 주제 노래 합창</li>
+      <li>별님반 주제 민속 무용</li>
+      <li>달님반 주제 에어 로비</li>
+      <li>꽃님반 주제 단체 합주</li>
+    </ol>
+    <h1>발 표 회</h1>
+    <ol class="first">
+      <li>
+        <ol class="second">
+          <li>햇님반</li>
+          <li>별님반</li>
+          <li>달님반</li>
+          <li>꽃님반</li>
+        </ol>
+      </li>
+      <li>햇님반 주제 노래 합창</li>
+      <li>별님반 주제 민속 무용</li>
+      <li>달님반 주제 에어 로비</li>
+      <li>꽃님반 주제 단체 합주</li>
+    </ol>
+  </body>
+</html>
