@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, "맑은 고딕", sans-serif;
+}
+.top {
+  width: 100%;
+  min-width: 1903px;
+  background: #000;
+}
+.top .topmenu {
+  width: 1903px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  line-height: 30px;
+}
+.top .topmenu ul {
+  display: flex;
+}
+.top .topmenu ul.left {
+  margin-left: 50px;
+}
+.top .topmenu ul.right {
+  margin-right: 50px;
+}
+.top .topmenu ul.right li a {
+  color: #fff;
+  margin-left: 20px;
+  text-align: center;
+}
+.head {
+  width: 1903px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.head .head_top {
+  width: calc(50% + 98.5px);
+  display: flex;
+  justify-content: space-between;
+}
+.head .head_top ul {
+  display: flex;
+  margin-right: 50px;
+}
+.menu {
+  width: 1903px;
+  margin: 20px auto 50px;
+  display: flex;
+  justify-content: center;
+}
+.menu ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+@font-face {
+  font-family: solid;
+  src: url(../webfonts/fa-solid-900.woff2) format("woff2");
+}
+.menu ul li a::after {
+  content: "\f107";
+  font-family: solid;
+  padding-left: 10px;
+}
+.gnb {
+  width: 100%;
+  min-width: 1903px;
+  background: #80d4c7;
+}
+.gnb ul {
+  width: 1903px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+}
+.gnb ul li {
+  margin-left: 100px;
+}
+.gnb ul li:first-child {
+  margin-left: 0;
+}
+.gnb ul li a {
+  text-decoration: underline;
+}
+section {
+  width: 1903px;
+  margin: 0 auto;
+}
+section h3 {
+  text-align: center;
+  padding: 30px 0;
+}
+section ul {
+  display: flex;
+}
+.foot {
+  width: 100%;
+  min-width: 1903px;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 50px;
+}
+.foot .ft_top {
+  width: 1903px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot .ft_top > ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.foot .ft_top > ul > li > a {
+  margin-bottom: 30px;
+  display: block;
+}
+.foot .ft_top > ul > li li a {
+  line-height: 30px;
+}
+.foot .ft_top > ul > li:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.foot .ft_top > ul > li:last-child input {
+  padding: 10px;
+}
+.foot .ft_top > ul > li:last-child input:last-child {
+  background: #000;
+  color: #fff;
+}
+:focus {
+  outline: none;
+}
+.ft_bottom {
+  width: 1903px;
+  margin: 0 auto;
+}
+.ft_bottom .ft {
+  width: 60%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ft_bottom .ft ul {
+  display: flex;
+}
+
+.ft_bottom .ft ul li a {
+  line-height: 30px;
+}
+.ft_bottom .ft ul li a::after {
+  position: relative;
+  top: -2px;
+  content: "|";
+  padding: 0 10px;
+  font-size: 10px;
+}
+.ft_bottom .ft ul li:last-child a::after {
+  content: "";
+}
+.ft_bottom .ft p {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
