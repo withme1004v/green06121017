@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .grid .head {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+      }
+      .grid .head > div:first-child {
+        background: #f00;
+        width: 200px;
+      }
+      .grid .head > div:nth-child(2) {
+        background: #0f0;
+        width: 1000px;
+      }
+      .grid > div:nth-child(2) {
+        background: #aaa;
+        height: 300px;
+      }
+      .grid .con {
+        display: flex;
+        height: 200px;
+      }
+      .grid .con > div:nth-child(1) {
+        background: #bbb;
+        width: 33.333%;
+      }
+      .grid .con > div:nth-child(2) {
+        background: #ccc;
+        width: 33.333%;
+      }
+      .grid .con > div:nth-child(3) {
+        background: #ddd;
+        width: 33.333%;
+      }
+      .grid .foot {
+        height: 100px;
+        display: flex;
+      }
+      .grid .foot > div:nth-child(1) {
+        background: #f00;
+        width: 200px;
+      }
+      .grid .foot > div:nth-child(2) {
+        background: #0f0;
+        width: 800px;
+      }
+      .grid .foot > div:nth-child(3) {
+        background: #00f;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid container1">
+      <div class="head">
+        <div class="grid-item">logo</div>
+        <div class="grid-item">menu</div>
+      </div>
+      <div class="grid-item">slide</div>
+      <div class="con">
+        <div class="grid-item">공지사항/갤러리</div>
+        <div class="grid-item">배너</div>
+        <div class="grid-item">바로가기</div>
+      </div>
+      <div class="foot">
+        <div class="grid-item">로고</div>
+        <div class="grid-item">copyright</div>
+        <div class="grid-item">sns</div>
+      </div>
+    </div>
+  </body>
+</html>
