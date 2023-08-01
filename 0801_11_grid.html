@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        height: 500px;
+        background: #ccc;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+      }
+      .grid-item {
+        background: #ddd;
+        border: 1px solid #000;
+      }
+      .grid-item:first-child {
+        justify-self: start;
+        align-self: start;
+        order: 3;
+      }
+      .grid-item:nth-child(2) {
+        justify-self: center;
+        align-self: center;
+        order: 2;
+      }
+      .grid-item:nth-child(3) {
+        justify-self: end;
+        align-self: end;
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+    </div>
+  </body>
+</html>

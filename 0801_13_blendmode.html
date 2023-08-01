@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background: url(images/photo1.jpg) center/cover;
+        /* filter: blur(2px); */
+      }
+      .text {
+        background: #fff;
+        text-align: center;
+        font-size: 100px;
+        padding: 10px;
+        font-weight: bold;
+      }
+      .bg:first-child .text {
+        mix-blend-mode: color;
+      }
+
+      .bg:nth-child(2) .text {
+        mix-blend-mode: color-burn;
+      }
+      .bg:nth-child(3) .text {
+        mix-blend-mode: color-dodge;
+      }
+      .bg:nth-child(4) .text {
+        mix-blend-mode: darken;
+      }
+      .bg:nth-child(5) .text {
+        mix-blend-mode: difference;
+      }
+      .bg:nth-child(6) .text {
+        mix-blend-mode: exclusion;
+      }
+      .bg:nth-child(7) .text {
+        mix-blend-mode: hard-light;
+      }
+      .bg:nth-child(8) .text {
+        mix-blend-mode: hue;
+      }
+      .bg:nth-child(9) .text {
+        mix-blend-mode: lighten;
+      }
+      .bg:nth-child(10) .text {
+        mix-blend-mode: luminosity;
+      }
+      .bg:nth-child(11) .text {
+        mix-blend-mode: multiply;
+      }
+      .bg:nth-child(12) .text {
+        mix-blend-mode: normal;
+      }
+      .bg:nth-child(13) .text {
+        mix-blend-mode: overlay;
+      }
+      .bg:nth-child(14) .text {
+        mix-blend-mode: saturation;
+      }
+      .bg:nth-child(15) .text {
+        mix-blend-mode: screen;
+      }
+      .bg:nth-child(16) .text {
+        mix-blend-mode: soft-light;
+      }
+      section {
+        background: #ccc;
+      }
+      section img {
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="text">mix-blend-mode: color</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:color-burn</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:color-dodge</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:darken</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode: difference</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode: exclusion</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode: hard-light</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:hue</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:lighten</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:luminosity</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:normal</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:overlay</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:saturation</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:screen</div>
+    </div>
+    <div class="bg">
+      <div class="text">mix-blend-mode:soft-light</div>
+    </div>
+    <section>
+      <img src="images/photo2.jpg" alt="" />
+    </section>
+  </body>
+</html>
