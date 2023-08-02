@@ -25,13 +25,16 @@
       }
       @keyframes opacity {
         0% {
-          opacity: 1;
+          /* opacity: 1; */
+          visibility: visible;
         }
         99% {
-          opacity: 1;
+          /* opacity: 1; */
+          visibility: visible;
         }
         100% {
-          opacity: 0;
+          /* opacity: 0; */
+          visibility: hidden;
         }
       }
       .visual {
@@ -56,7 +59,7 @@
       }
       .top p {
         /* top: 200px; */
-        animation: top 2s ease-out 0.5s both;
+        animation: top 2s ease-out 0.2s both;
       }
       .bottom p {
         animation: bottom 2s ease-out 0.5s both;
