@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 775px;
+        background: #fff;
+        z-index: 1;
+        animation: opacity 1s forwards;
+      }
+      @keyframes opacity {
+        0% {
+          opacity: 1;
+        }
+        99% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .visual {
+        position: relative;
+        width: 1920px;
+        height: 775px;
+        overflow: hidden;
+      }
+      .visual > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 775px;
+        mix-blend-mode: multiply;
+      }
+      .visual > div p,
+      .visual > div span {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .top p {
+        /* top: 200px; */
+        animation: top 2s ease-out 0.5s both;
+      }
+      .bottom p {
+        animation: bottom 2s ease-out 0.5s both;
+      }
+      .top span:first-of-type {
+        mix-blend-mode: multiply;
+      }
+      .top span:last-of-type {
+        mix-blend-mode: screen;
+      }
+      .bottom span:first-of-type {
+        mix-blend-mode: multiply;
+      }
+      .bottom span:last-of-type {
+        mix-blend-mode: screen;
+      }
+      @keyframes top {
+        0% {
+          top: 300px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+      @keyframes bottom {
+        0% {
+          top: -200px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="visual">
+      <div class="top">
+        <p><img src="images/haut-6.webp" alt="" /></p>
+        <p><img src="images/haut-5.webp" alt="" /></p>
+        <p><img src="images/haut-3.webp" alt="" /></p>
+        <p><img src="images/haut-2.webp" alt="" /></p>
+        <p><img src="images/haut-1.webp" alt="" /></p>
+        <span><img src="images/mask-top-2.png" alt="" /></span>
+        <span><img src="images/mask-bottom-2.png" alt="" /></span>
+      </div>
+      <div class="bottom">
+        <p><img src="images/bas-2.webp" alt="" /></p>
+        <p><img src="images/bas-3.webp" alt="" /></p>
+        <p><img src="images/bas-1.webp" alt="" /></p>
+        <span><img src="images/mask-bottom-2.png" alt="" /></span>
+        <span><img src="images/mask-top-2.png" alt="" /></span>
+      </div>
+    </div>
+  </body>
+</html>

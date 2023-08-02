@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+      }
+      #wrap {
+        width: 100%;
+        display: flex;
+      }
+      .left {
+        /* width: 20%; */
+        flex-grow: 2;
+        height: 100vh;
+        background: #aaa;
+      }
+      .center {
+        flex-grow: 6;
+        /* width: 60%; */
+        height: 100vh;
+        background: #bbb;
+      }
+      .right {
+        flex-grow: 2;
+        /* width: 20%; */
+        height: 100vh;
+        background: #ccc;
+      }
+      @media screen and (max-width: 1024px) {
+        #wrap {
+          flex-wrap: wrap;
+        }
+        .left {
+          flex-basis: 20%;
+          flex-shrink: 0;
+        }
+        .center {
+          flex-basis: 80%;
+          flex-shrink: 0;
+        }
+        .right {
+          flex-basis: 100%;
+          flex-shrink: 0;
+          height: 200px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #wrap > div {
+          flex-basis: 100%;
+        }
+        .left {
+          order: 2;
+          height: 200px;
+        }
+        .center {
+          order: 1;
+        }
+        .right {
+          order: 3;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .center,
+        .right {
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="left"><h1>1</h1></div>
+      <div class="center"><h1>2</h1></div>
+      <div class="right"><h1>3</h1></div>
+    </div>
+  </body>
+</html>

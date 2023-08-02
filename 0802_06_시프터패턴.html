@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+      }
+      #wrap .left {
+        flex-basis: 20%;
+        background: #aaa;
+        height: 100vh;
+      }
+      #wrap .contents {
+        flex-basis: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      #wrap .contents .center {
+        background: #bbb;
+        flex-grow: 1;
+      }
+      #wrap .contents .right {
+        background: #ccc;
+        flex-grow: 1;
+      }
+      @media screen and (max-width: 768px) {
+        #wrap {
+          flex-direction: column;
+          height: 700px;
+        }
+        #wrap .left {
+          flex-basis: 10%;
+        }
+        #wrap .contents .center {
+          flex-grow: 0;
+          height: 300px;
+        }
+        #wrap .contents .right {
+          flex-grow: 0;
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="left">
+        <h1>1</h1>
+      </div>
+      <div class="contents">
+        <div class="center"><h1>2</h1></div>
+        <div class="right"><h1>3</h1></div>
+      </div>
+    </div>
+  </body>
+</html>
