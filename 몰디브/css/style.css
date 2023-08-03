@@ -1,0 +1,477 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: poiretone;
+  src: url(../webfonts/PoiretOne-Regular.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+body {
+  font-family: poiretone, sans-serif;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: #fff;
+}
+header h1 {
+  text-indent: -9999px;
+  width: 180px;
+  height: 136px;
+  background: url(../images/logo1.png);
+  margin: 70px auto 0;
+}
+header #gnb {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header #gnb li a {
+  display: block;
+  font-weight: bold;
+  padding: 8px 0;
+}
+header #gnb li i {
+  width: 30px;
+}
+.snsSet {
+  position: absolute;
+  bottom: 50px;
+  width: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.snsSet ul li {
+  float: left;
+}
+#util {
+  position: relative;
+  left: 20%;
+  width: 80%;
+  height: 35px;
+  background: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#util ul {
+  display: flex;
+}
+#contents {
+  position: relative;
+  left: 20%;
+  width: 80%;
+}
+#contents article {
+  float: left;
+  height: 260px;
+}
+#contents article div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+#contents article:first-child {
+  width: 60%;
+  height: 520px;
+}
+#contents article:nth-child(2) {
+  width: 40%;
+}
+#contents article:nth-child(3) {
+  width: 20%;
+}
+#contents article:nth-child(4) {
+  width: 20%;
+}
+#contents article:nth-child(5) {
+  width: 20%;
+}
+#contents article:nth-child(6) {
+  width: 40%;
+}
+#contents article:nth-child(7) {
+  width: 20%;
+}
+#contents article:nth-child(8) {
+  width: 20%;
+}
+#contents article:nth-child(9) {
+  width: 40%;
+}
+#contents article:nth-child(10) {
+  width: 20%;
+}
+#contents article:nth-child(11) {
+  width: 20%;
+}
+#contents article:nth-child(12) {
+  width: 20%;
+}
+#contents article .bg1 {
+  background: url(../images/pic1.jpg);
+}
+#contents article .bg2 {
+  background: url(../images/pic2.jpg);
+}
+#contents article .bg3 {
+  background: url(../images/pic3.jpg);
+}
+#contents article .bg4 {
+  background: url(../images/pic4.jpg);
+}
+#contents article .bg5 {
+  background: url(../images/pic5.jpg);
+}
+#contents article .bg6 {
+  background: url(../images/pic6.jpg);
+}
+#contents article .bg7 {
+  background: url(../images/pic7.jpg);
+}
+#contents article .bg {
+  background-position: center;
+  background-size: cover;
+}
+#contents article span {
+  position: absolute;
+  font-size: 60px;
+  color: #fff;
+  bottom: 0;
+  right: 20px;
+  opacity: 0;
+  transform: scale(10);
+  transition: all 0.5s;
+}
+#contents article:hover span {
+  opacity: 1;
+  transform: scale(1);
+}
+#contents article .bg1 span {
+  font-size: 170px;
+  color: #333;
+  right: -10px;
+  bottom: -40px;
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+  transition: all 0.5s;
+}
+#contents article .bg1:hover span {
+  transform: scale(1) rotateY(360deg);
+  color: #fff;
+}
+#contents article .txt {
+  color: #666;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+#contents article .txt i {
+  position: absolute;
+  bottom: -40px;
+  right: -300px;
+  font-size: 300px;
+  color: #b3effc;
+  transition: all 0.5s;
+}
+#contents article:hover .txt i {
+  right: 0;
+  opacity: 0.5;
+}
+#contents article:hover .txt {
+  background: #6ce2fb;
+  color: #fff;
+}
+#contents article:nth-child(3) .txt {
+  background: #bff7fa;
+}
+#contents article:nth-child(3) .txt i {
+  font-size: 200px;
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.7;
+}
+#contents article .txt strong {
+  display: block;
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 1599px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+  header h1 {
+    width: 250px;
+    height: 50px;
+    background: url(../images/logo2.png);
+    margin: 30px 0 0;
+  }
+  header #gnb {
+    top: 0;
+    left: 45%;
+    transform: translateX(0);
+  }
+  header #gnb li {
+    float: left;
+  }
+  header #gnb li a {
+    padding: 8px 30px;
+  }
+  .snsSet {
+    bottom: 20px;
+    left: 90%;
+    transform: translateX(0);
+  }
+  #util {
+    width: 100%;
+    left: 0;
+  }
+  #contents {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1279px) {
+  header #gnb {
+    left: 50%;
+  }
+  header #gnb li a {
+    padding: 8px 20px;
+  }
+  .snsSet {
+    display: none;
+  }
+  #contents article:first-child {
+    width: 75%;
+  }
+  #contents article:nth-child(2) {
+    width: 25%;
+  }
+  #contents article:nth-child(3) {
+    width: 25%;
+  }
+  #contents article:nth-child(4) {
+    width: 25%;
+  }
+  #contents article:nth-child(5) {
+    width: 25%;
+  }
+  #contents article:nth-child(6) {
+    width: 50%;
+  }
+  #contents article:nth-child(7) {
+    width: 50%;
+  }
+  #contents article:nth-child(8) {
+    width: 25%;
+  }
+  #contents article:nth-child(9) {
+    width: 25%;
+  }
+  #contents article:nth-child(10) {
+    width: 50%;
+  }
+  #contents article:nth-child(11) {
+    width: 25%;
+  }
+  #contents article:nth-child(12) {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  header #gnb {
+    top: 10px;
+  }
+  header #gnb li a {
+    padding: 8px 5px;
+  }
+  #contents article:first-child {
+    width: 100%;
+  }
+  #contents article:nth-child(2) {
+    width: 66.666%;
+  }
+  #contents article:nth-child(3) {
+    width: 33.334%;
+  }
+  #contents article:nth-child(4) {
+    display: none;
+  }
+  #contents article:nth-child(5) {
+    width: 33.333%;
+  }
+  #contents article:nth-child(6) {
+    width: 66.667%;
+  }
+  #contents article:nth-child(7) {
+    display: none;
+  }
+  #contents article:nth-child(8) {
+    width: 33.333%;
+  }
+  #contents article:nth-child(9) {
+    width: 33.333%;
+  }
+  #contents article:nth-child(10) {
+    display: none;
+  }
+  #contents article:nth-child(11) {
+    width: 33.334;
+  }
+  #contents article:nth-child(12) {
+    display: none;
+  }
+}
+@media screen and (max-width: 779px) {
+  header #gnb {
+    left: 45%;
+  }
+  header #gnb li a {
+    padding: 8px 2px;
+  }
+  #contents article:first-child {
+    width: 100%;
+    height: 520px;
+  }
+  #contents article:nth-child(2) {
+    width: 100%;
+  }
+  #contents article:nth-child(3) {
+    display: none;
+  }
+  #contents article:nth-child(4) {
+    display: none;
+  }
+  #contents article:nth-child(5) {
+    width: 50%;
+  }
+  #contents article:nth-child(6) {
+    width: 50%;
+  }
+  #contents article:nth-child(7) {
+    display: none;
+  }
+  #contents article:nth-child(8) {
+    width: 50%;
+  }
+  #contents article:nth-child(9) {
+    width: 50%;
+  }
+  #contents article:nth-child(10) {
+    display: none;
+  }
+  #contents article:nth-child(11) {
+    width: 50%;
+  }
+  #contents article:nth-child(12) {
+    display: block;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  header {
+    height: 125px;
+  }
+  header h1 {
+    margin: 20px auto 0;
+  }
+  header #gnb {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  header #gnb li {
+    width: 25%;
+    text-align: center;
+  }
+  #util {
+    display: none;
+  }
+  article {
+    height: 150px;
+  }
+  article:nth-child(1) {
+    height: 300px;
+  }
+  article .txt i {
+    font-size: 130px;
+    bottom: 0;
+  }
+  article .txt p strong {
+    font-size: 25px;
+    color: #444;
+  }
+  article .txt p em {
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  header {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+  }
+  header h1 {
+    background: url(../images/logo1.png);
+    width: 180px;
+    height: 136px;
+    margin: 0 auto;
+  }
+  header #gnb {
+    width: 250px;
+    margin: 100px auto 0;
+    top: 0;
+  }
+  header #gnb li {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  header #gnb li a {
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+  }
+  article {
+    display: none;
+  }
+  #contents article:first-child {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #contents article:first-child span {
+    display: none;
+  }
+  #contents article:nth-child(12) {
+    display: none;
+  }
+}

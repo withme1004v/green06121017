@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        overflow: hidden;
+      }
+      #wrap {
+        width: 80%;
+        margin: 0 auto;
+      }
+      #wrap_box {
+        width: 100%;
+      }
+      #wrap_box > div {
+        float: left;
+        height: 400px;
+      }
+      #wrap_box #box_a {
+        width: 30%;
+        background: #aaa;
+      }
+      #wrap_box #box_b {
+        width: 40%;
+        background: #bbb;
+      }
+      #wrap_box #box_c {
+        width: 30%;
+        background: #ccc;
+      }
+      @media screen and (max-width: 1024px) {
+        #wrap {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #wrap_box {
+          position: absolute;
+          width: 150%;
+        }
+        #wrap_box #box_a {
+          width: 33.333%;
+        }
+        #wrap_box #box_b {
+          width: 33.334%;
+        }
+        #wrap_box #box_c {
+          width: 33.333%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #wrap_box {
+          width: 300%;
+          margin-left: -100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="wrap_box">
+        <div id="box_a"><h1>a</h1></div>
+        <div id="box_b"><h1>b</h1></div>
+        <div id="box_c"><h1>c</h1></div>
+      </div>
+    </div>
+  </body>
+</html>
