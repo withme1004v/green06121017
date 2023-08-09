@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kor = Number(prompt("국어점수는?", "0"));
+      let math = Number(prompt("수학점수는?", "0"));
+      let eng = Number(prompt("영어점수는?", "0"));
+      let avg = (kor + math + eng) / 3;
+      let result = kor >= 40 && math >= 40 && eng >= 40 && avg >= 60;
+      let test = result ? "당신은 합격입니다." : "당신은 불합격입니다.";
+      document.write(
+        "당신의 국어점수는" +
+          kor +
+          "점이고 수학점수는" +
+          math +
+          "이고 영어점수는" +
+          eng +
+          "점입니다.<br>"
+      );
+      document.write(typeof kor + "<br>");
+      document.write("당신의 총점은 ", kor + math + eng, "점입니다<br>");
+      document.write("당신의 평균은 ", avg, "점입니다<br>");
+      document.write(test);
+    </script>
+  </body>
+</html>

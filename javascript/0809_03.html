@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="show">태그 보이기</button>
+    <button id="hide">태그 숨기기</button>
+    <div id="content"></div>
+    <script>
+      let str = "<ul>";
+      str = str + '<li><a href="">링크1</a></li>';
+      str = str + '<li><a href="">링크2</a></li>';
+      str = str + '<li><a href="">링크3</a></li>';
+      //str = str + '<li><a href="">링크4</a></li>';
+      str += '<li><a href="">링크4</a></li>';
+      str = str + "</ul>";
+      //document.write(str);
+      document.getElementById("show").addEventListener("click", function () {
+        //document.getElementById("content").innerHTML = str;
+        document.getElementById("content").innerText = str;
+      });
+      document.getElementById("hide").onclick = function () {
+        document.getElementById("content").innerHTML = "";
+      };
+    </script>
+  </body>
+</html>

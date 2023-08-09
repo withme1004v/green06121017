@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <script>
+      document.getElementsByTagName("h2")[0].innerHTML = "heading태그";
+      var x = 10;
+      x = "하나";
+      var x = "재선언";
+      {
+        var x = "코드블록실행문";
+      }
+      console.log("x : " + x); //+ : 문자와 숫자를 결합용도
+      var y = 20;
+      var z = 30;
+
+      console.log(y + z); //+ : 숫자와 숫자를 덧셈으로 연산
+      let a = 100; //변수 선언
+      a = 200; //변수 재할당
+      {
+        let a = 500;
+      }
+      //let a = 300; //변수 재선언 안됨
+      console.log("a : " + a);
+      const b = 400; //변수 선언
+      {
+        const b = 500;
+        console.log("블록내부 b :" + b);
+      }
+      console.log("b : " + b);
+      //b = 500; //변수재할당안됨
+    </script>
+  </body>
+</html>

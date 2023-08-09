@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+      let c = 30;
+      let d = 40;
+      let e = "10";
+      document.write(a < b && c < d, "<br>");
+      document.write(a > b || c < d, "<br>");
+      document.write(!(a > b) || c < d, "<br>");
+      document.write(a === e, "<br>");
+      document.write(typeof a, "<br>");
+      document.write(typeof e, "<br>");
+      let f = Number("10");
+      document.write(typeof f, "<br>");
+      let g = Number("하나");
+      document.write(g, "<br>");
+      document.write(typeof parseFloat(10.33), "<br>");
+      document.write(typeof parseFloat("10.33"), "<br>");
+      document.write(typeof parseFloat(e), "<br>");
+      document.write(parseFloat("40 50 60"), "<br>");
+      document.write(parseFloat("40h"), "<br>");
+      document.write(parseFloat("h40"), "<br>");
+      document.write(parseInt("10.33"), "<br>");
+      document.write(parseInt(10.33), "<br>");
+      document.write(parseInt(10.55), "<br>");
+      //let y = "5";
+      let y = "하나";
+      let x = +y;
+      document.write(typeof y + "<br>" + typeof x + "<br>");
+    </script>
+  </body>
+</html>

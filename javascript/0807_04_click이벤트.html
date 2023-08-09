@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <input type="button" value="변경하기" onclick="my()" />
+    <div>
+      <h2 id="demo"></h2>
+    </div>
+    <script>
+      let a = "여기부터 시작";
+      document.getElementsByTagName("input")[0].style.cursor = "pointer";
+      function my() {
+        document.getElementById("demo").innerHTML = a;
+        document.getElementById("demo").style.border = "1px solid #000";
+      }
+    </script>
+  </body>
+</html>

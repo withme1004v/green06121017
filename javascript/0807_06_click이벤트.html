@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <p>변경하기</p>
+    <div>
+      <h2 id="demo">변경전입니다.</h2>
+    </div>
+    <script>
+      let a = "변경후입니다.";
+      document.getElementsByTagName("p")[0].style.cursor = "pointer";
+      //   document
+      //     .getElementsByTagName("input")[0]
+      //     .addEventListener("click", function () {
+      //       document.getElementById("demo").innerHTML = a;
+      //       document.getElementById("demo").style.border = "1px solid #000";
+      //     });
+
+      document.getElementsByTagName("p")[0].onclick = function () {
+        document.getElementById("demo").innerHTML = a;
+        document.getElementById("demo").style.border = "1px solid #000";
+      };
+    </script>
+  </body>
+</html>
