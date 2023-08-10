@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>재미있는 자바스크립트</h1>
+    <h2>재미있는 자바스크립트</h2>
+    <h3>재미있는 자바스크립트</h3>
+    <h4>재미있는 자바스크립트</h4>
+    <h5>재미있는 자바스크립트</h5>
+    <h6>재미있는 자바스크립트</h6> -->
+    <script>
+      for (let i = 1; i <= 6; i++) {
+        document.write(
+          "<h" +
+            i +
+            ">" +
+            "h" +
+            '<span style="color: red">' +
+            i +
+            "</span>" +
+            "재미있는 자바스크립트</h" +
+            i +
+            ">"
+        );
+      }
+      for (let i = 6; i >= 1; i--) {
+        document.write(
+          "<h" +
+            i +
+            ">" +
+            "h" +
+            '<span style="color: red">' +
+            i +
+            "</span>" +
+            "재미있는 자바스크립트</h" +
+            i +
+            ">"
+        );
+      }
+    </script>
+  </body>
+</html>

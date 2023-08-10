@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let jumsu = Number(prompt("점수를 입력해주세요"));
+      let level = parseInt(jumsu / 10);
+      let result = "";
+      /*if (jumsu >= 90) {
+        result = "A";
+      } else if (jumsu >= 80) {
+        result = "B";
+      } else {
+        result = "F";
+      }*/
+      console.log(level);
+      switch (level) {
+        case 9:
+          result = "A";
+          break;
+        case 8:
+          result = "B";
+          break;
+        default:
+          result = "F";
+      }
+      document.write(
+        "당신이 입력한 점수는 " + jumsu + "이고 학점은 " + result + "입니다"
+      );
+    </script>
+  </body>
+</html>
