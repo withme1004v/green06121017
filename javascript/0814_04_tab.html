@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .tabcon {
+        padding: 50px;
+        text-align: center;
+      }
+      .tabButton {
+        display: flex;
+      }
+      .tabButton .tablink {
+        width: 25%;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabcon">
+      <h1>content1</h1>
+    </div>
+    <div class="tabcon">
+      <h1>content2</h1>
+    </div>
+    <div class="tabcon">
+      <h1>content3</h1>
+    </div>
+    <div class="tabcon">
+      <h1>content4</h1>
+    </div>
+    <div class="tabButton">
+      <p class="tablink">content1</p>
+      <p class="tablink">content2</p>
+      <p class="tablink">content3</p>
+      <p class="tablink">content4</p>
+    </div>
+    <script>
+      const bg_color = ["red", "green", "blue", "orange"];
+      let content = document.querySelectorAll(".tabcon");
+      let btn = document.querySelectorAll(".tablink");
+      for (let i = 0; i <= 3; i++) {
+        content[i].style.backgroundColor = bg_color[i];
+        btn[i].style.backgroundColor = bg_color[i];
+        content[i].style.display = "none";
+      }
+      content[2].style.display = "block";
+      btn.forEach(function (item, keys) {
+        console.log("item :" + item + "\n" + "keys : " + keys);
+        item.onclick = function (e) {
+          let j = Array.from(btn).indexOf(e.target);
+          console.log("j : " + j);
+          for (let i = 0; i <= 3; i++) {
+            content[i].style.backgroundColor = bg_color[i];
+            btn[i].style.backgroundColor = bg_color[i];
+            content[i].style.display = "none";
+            content[j].style.display = "block";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW", 100, "100"];
+      document.getElementById("demo").innerHTML = cars[0];
+      const arr1 = ["하나", "둘", "셋", 100, "100"];
+      const arr2 = [];
+      arr2[0] = 100;
+      arr2[1] = 80;
+      arr2[2] = 70;
+      document.write("arr2의 배열의 개수는 " + arr2.length);
+      const arr3 = new Array();
+      arr3[0] = "one";
+      arr3[1] = "two";
+      arr3[2] = "three";
+      const arr4 = new Array("하나", "둘", "셋");
+      const arr5 = ["홍길동", 100, 80, 70];
+      arr5[4] = arr5[1] + arr5[2] + arr5[3];
+      arr5[5] = arr5[4] / 3;
+      arr5[6] = function () {
+        document.write(
+          arr5[0] +
+            "님의 합계는 " +
+            arr5[4] +
+            "점이고 평균은 " +
+            arr5[5] +
+            "점입니다."
+        );
+      };
+      arr5[6]();
+    </script>
+  </body>
+</html>
