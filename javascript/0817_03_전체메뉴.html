@@ -35,9 +35,26 @@
         text-align: center;
         line-height: 50px;
       }
-      .menu ul li:hover,
-      .menu ul li.on {
+      .menu ul li a:hover,
+      .menu ul li a.on {
         background: #ccc;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .menu ul li a:hover::after,
+      .menu ul li a.active::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        right: 30%;
       }
       .submenu {
         position: absolute;
@@ -149,13 +166,14 @@
         });
       });
       sub.forEach(function (item, keys) {
+        let x = gnb[keys].querySelector("a");
         item.addEventListener("mouseenter", function () {
           subMenu.classList.add("on");
-          gnb[keys].classList.add("on");
+          x.classList.add("on", "active");
         });
         item.addEventListener("mouseleave", function () {
           subMenu.classList.remove("on");
-          gnb[keys].classList.remove("on");
+          x.classList.remove("on", "active");
         });
       });
     </script>

@@ -35,9 +35,26 @@
         text-align: center;
         line-height: 50px;
       }
-      .menu ul li:hover,
-      .menu ul li.on {
+      .menu ul li a:hover,
+      .menu ul li a.on {
         background: #ccc;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .menu ul li a:hover::after,
+      .menu ul li a.active::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        right: 30%;
       }
       .submenu {
         position: absolute;
@@ -49,9 +66,9 @@
         overflow: hidden;
         transition: height 0.5s;
       }
-      .submenu.on {
+      /* .submenu.on {
         height: 200px;
-      }
+      } */
       .submenu .lnb {
         width: 1280px;
         margin: 0 auto;
@@ -89,6 +106,10 @@
           <ul>
             <li>
               <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴1</a></li>
@@ -139,23 +160,26 @@
     <script>
       let subMenu = document.querySelector(".submenu");
       let sub = document.querySelectorAll(".lnb>ul>li");
-      let gnb = document.querySelectorAll(".menu ul li");
+      let gnb = document.querySelectorAll(".menu ul li a");
+      let ht = document.querySelector(".lnb").offsetHeight;
+      console.log("ht : " + ht);
       gnb.forEach(function (item, keys) {
         item.addEventListener("mouseenter", function () {
-          subMenu.classList.add("on");
+          subMenu.style.height = ht + "px";
+          console.log(keys);
         });
         item.addEventListener("mouseleave", function () {
-          subMenu.classList.remove("on");
+          subMenu.style.height = 0 + "px";
         });
       });
       sub.forEach(function (item, keys) {
         item.addEventListener("mouseenter", function () {
-          subMenu.classList.add("on");
-          gnb[keys].classList.add("on");
+          subMenu.style.height = ht + "px";
+          gnb[keys].classList.add("on", "active");
         });
         item.addEventListener("mouseleave", function () {
-          subMenu.classList.remove("on");
-          gnb[keys].classList.remove("on");
+          subMenu.style.height = 0 + "px";
+          gnb[keys].classList.remove("on", "active");
         });
       });
     </script>
