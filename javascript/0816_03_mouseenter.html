@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        margin: 0 auto;
+        height: 300px;
+      }
+      div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="images/photo1.jpg" alt="photo1" />
+    </div>
+    <script>
+      let x = document.getElementsByTagName("img")[0];
+      let i = 1;
+      x.onmouseenter = function () {
+        this.setAttribute("src", "images/photo" + i + ".jpg");
+        i++;
+        console.log(i);
+        if (i > 6) {
+          i = 1;
+        }
+      };
+    </script>
+  </body>
+</html>
