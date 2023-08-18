@@ -379,20 +379,26 @@
         });
 
         item.addEventListener("mouseleave", function () {
-          //subMenu.style.height = 0 + "px";
+          for (let i = 0; i <= 4; i++) {
+            subMenu[i].style.height = 0 + "px";
+          }
         });
       });
       subMenu.forEach(function (item, keys) {
-        item.addEventListener("mouseenter", function () {
-          //subMenu.style.height = ht + "px";
+        item.addEventListener("mouseenter", function (e) {
+          let j = Array.from(subMenu).indexOf(e.target);
+          sub.forEach(function () {
+            let subht = sub[j].offsetHeight;
+            console.log("subht : " + subht);
+            subMenu[j].style.height = subht + "px";
+            subMenu[j].style.opacity = "1";
+          });
           gnb[keys].classList.add("on", "active");
         });
         item.addEventListener("mouseleave", function (e) {
-          let j = Array.from(subMenu).indexOf(e.target);
-          subMenu[j].style.height = 0 + "px";
-          /* for (let i = 0; i <= 4; i++) {
+          for (let i = 0; i <= 4; i++) {
             subMenu[i].style.height = 0 + "px";
-          }*/
+          }
           gnb[keys].classList.remove("on", "active");
         });
       });
