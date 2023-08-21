@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      div img {
+        width: 100%;
+        object-fit: cover;
+      }
+      p span {
+        display: inline-block;
+        width: 100px;
+        line-height: 30px;
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>이미지 넘기기</h1>
+      <p>
+        <span id="prev">이전</span>
+        <span id="next">다음</span>
+      </p>
+      <img src="images/photo1.jpg" alt="photo1" />
+    </div>
+    <script>
+      let prevBtn = document.getElementById("prev");
+      let nextBtn = document.getElementById("next");
+      let i = 1;
+      function gallery(a) {
+        if (a) {
+          if (i == 6) return;
+          i++;
+        } else {
+          if (i == 1) return;
+          i--;
+        }
+        document.getElementsByTagName("img")[0].src =
+          "images/photo" + i + ".jpg";
+      }
+      prevBtn.onclick = function () {
+        gallery(0);
+      };
+      nextBtn.onclick = function () {
+        gallery(1);
+      };
+    </script>
+  </body>
+</html>

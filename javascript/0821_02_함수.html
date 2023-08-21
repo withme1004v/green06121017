@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>클릭</button>
+    <script>
+      function myfnc() {
+        for (let i = 1; i <= 10; i++) {
+          document.write(i + "<br>");
+        }
+      }
+      //document.getElementsByTagName("button")[0].onclick = myfnc;
+      document.getElementsByTagName("button")[0].onclick = function () {
+        myfnc();
+      };
+      // setInterval(실행문,시간)
+      /* setInterval(function () {
+        myfnc();
+      }, 1000);*/
+      //setInterval(myfnc, 1000);
+      //myfnc();
+      (function () {
+        myfnc();
+      })();
+    </script>
+  </body>
+</html>
