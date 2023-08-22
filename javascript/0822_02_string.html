@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt("당신의 영문이름은 ?");
+      let tel = prompt("당신의 주민등록번호는 ?");
+      //   document.write(
+      //     name.toUpperCase() +
+      //       "<br>" +
+      //       tel.substring(0, tel.length - 6) +
+      //       "******"
+      //   );
+      let star = "*";
+      document.write(
+        name.toUpperCase() +
+          "<br>" +
+          //tel.substring(0, tel.length - 6) +
+          //star.repeat(6)
+          tel.slice(0, tel.length - 6) +
+          star.repeat(6)
+      );
+    </script>
+  </body>
+</html>

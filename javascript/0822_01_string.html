@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //String:자바스크립트에서 문자열을 다루는 객체
+      let str = new String("nice to meet to meet you");
+      document.write(str.search("m") + "<br>");
+      document.write(str.replace("nice", "happy") + "<br>");
+      document.write(str.indexOf("to") + "<br>");
+      document.write(str.lastIndexOf("to") + "<br>");
+      document.write("match : " + str.match("nice") + "<br>");
+      document.write("charAt : " + str.charAt(3) + "<br>");
+      //substr(start,length)
+      document.write("substr : " + str.substr(0, 3) + "<br>");
+      document.write("substr : " + str.substr(-3, 1) + "<br>");
+      //substring(start,end)
+      document.write("substring : " + str.substring() + "<br>");
+      document.write("substring : " + str.substring(0, 3) + "<br>");
+      document.write("substring : " + str.substring(-3, 3) + "<br>");
+      //인수값에 음수(0보다 작은값)가 입력되면 0으로 처리
+      let txt = "123456-1234567";
+      document.write("길이 : " + txt.length + "<br>");
+      document.write(
+        txt.replace(txt.substr(txt.length - 6), "******") + "<br>"
+      );
+      document.write(txt.substring(0, txt.length - 6) + "******" + "<br>");
+      //slice(start,end)
+      document.write(txt.slice() + "<br>");
+      document.write(txt.slice(0, 7) + "<br>");
+      document.write(txt.slice(-2) + "<br>");
+      document.write(txt.slice(-3, -2) + "<br>");
+      document.write(str.split(" ") + "<br>");
+      let arr = str.split(" ");
+      document.write(arr[1] + "<br>");
+      let txt2 = "nice,to,meet,you";
+      let arr2 = txt2.split(",");
+      let n = arr2.length;
+      for (let i = 0; i < n; i++) {
+        document.write(arr2[i] + "<br>");
+      }
+      document.write(txt2.toUpperCase() + "<br>");
+      let txt3 = "Microsoft and microsoft and microsoft";
+      document.write(txt3.replace("microsoft", "마이크로소프트") + "<br>");
+      document.write(txt3.replaceAll("microsoft", "마이크로소프트") + "<br>");
+      document.write(txt3.replace(/microsoft/i, "마이크로소프트") + "<br>");
+      //대소문자를 구분하지않는 일치수행
+      document.write(txt3.replace(/microsoft/g, "마이크로소프트") + "<br>");
+      //전역 일치 수행(첫 번째 일치 후 중지하지 않고 모든 일치 찾기)
+      document.write(txt3.replace(/Microsoft/g, "마이크로소프트") + "<br>");
+    </script>
+  </body>
+</html>

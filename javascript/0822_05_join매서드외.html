@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      const drink = ["coffee", "milk", "tea"];
+      document.write(fruits.join(" * ") + "<br>");
+      fruits.pop();
+      document.write(fruits + "<br>");
+      fruits.push("Kiwi");
+      document.write(fruits + "<br>");
+      fruits.shift();
+      document.write(fruits + "<br>");
+      fruits.unshift("Lemon");
+      document.write(fruits + "<br>");
+      const cafe = fruits.concat(drink);
+      document.write(cafe + "<br>");
+      cafe.splice(1, 2, "new", "new1");
+      document.write(cafe + "<br>");
+      document.write(cafe.slice(1, 3) + "<br>");
+      document.write(cafe.slice(-3) + "<br>");
+      document.write(cafe.slice(-3, -2) + "<br>");
+      // document.write(cafe.sort() + "<br>");
+      document.write(cafe.reverse(cafe.sort()) + "<br>");
+
+      const numbers = [45, 4, 9, 16, 25];
+      let txt = "";
+      let txt1 = "";
+      /*numbers.forEach(myFunction);
+      document.write(txt);
+      function myFunction(value, index, array) {
+        txt += value + "<br>";
+      }*/
+      numbers.forEach(function (value, index, array) {
+        txt += value + "index : " + index + "<br>";
+        txt1 = array;
+      });
+      document.write(txt + "<br>");
+      document.write(txt1 + "<br>");
+
+      const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+      // let position = fruits1.indexOf("Apple", 1);
+      //let position = fruits1.indexOf("banana");
+      let position = fruits1.lastIndexOf("Apple");
+      document.write(position + "<br>");
+      document.write(typeof fruits1 + "<br>");
+      document.write(Object.keys(fruits1) + "<br>");
+      const person = { name: "홍길동", age: 30, gender: "남" };
+      document.write(typeof person + "<br>");
+      document.write(Object.keys(person) + "<br>");
+      let a = person instanceof Array;
+      document.write(a + "<br>");
+    </script>
+  </body>
+</html>

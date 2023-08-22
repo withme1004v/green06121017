@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userEmail = prompt("당신의 이메일주소는 ");
+      let arr = [".com", ".co.kr", ".net", ".or.kr", ".go.kr", ".ac.kr"];
+
+      let check1 = false;
+      let check2 = false;
+      if (userEmail.indexOf("@") > 0) {
+        check1 = true;
+      }
+      let len = arr.length;
+      for (let i = 0; i < len; i++) {
+        if (userEmail.indexOf(arr[i]) > 0) {
+          check2 = true;
+        }
+      }
+      if (check1 == true && check2 == true) {
+        document.write("당신의 이메일 주소는 " + userEmail + "입니다");
+      } else {
+        document.write(
+          "당신의 이메일 주소" + userEmail + "는 올바른 이메일주소가 아닙니다"
+        );
+      }
+    </script>
+  </body>
+</html>
