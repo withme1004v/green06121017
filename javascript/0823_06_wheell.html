@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: red;
+      }
+      section:nth-child(2) {
+        background: green;
+      }
+      section:nth-child(3) {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <script>
+      window.addEventListener("wheel", function (e) {
+        let delta = e.deltaY || e.wheelDelta;
+        console.log(e.deltaY);
+        let down = delta < 0;
+        let ht = window.pageYOffset || document.documentElement.scrollTop;
+        console.log("window.pageYOffset : " + window.pageYOffset);
+        console.log("ht : " + ht);
+        let n = Math.ceil(ht / window.innerHeight) * window.innerHeight;
+        console.log("n : " + n);
+        let nextPage = down
+          ? Math.floor(ht / window.innerHeight) * window.innerHeight
+          : Math.ceil(ht / window.innerHeight) * window.innerHeight;
+        window.scrollTo({
+          top: nextPage,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

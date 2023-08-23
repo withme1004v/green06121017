@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="text" id="fname" onchange="upperCase()" />
+    <select name="my" id="myselect">
+      <option value="html">Html</option>
+      <option value="css">css</option>
+      <option value="javascript">javascript</option>
+      <option value="jquery">jquery</option>
+    </select>
+    <p id="demo"></p>
+    <script>
+      function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+      //document.getElementById("myselect").onchange = function () {
+      document
+        .getElementById("myselect")
+        .addEventListener("change", function () {
+          document.getElementById("demo").innerHTML =
+            document.getElementById("myselect").value;
+        });
+    </script>
+  </body>
+</html>

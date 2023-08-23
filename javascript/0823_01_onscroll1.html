@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 250px;
+        height: 250px;
+        overflow: auto;
+      }
+      #content {
+        width: 2000px;
+        height: 2000px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="content">scroll me!</div>
+    </div>
+    <p id="demo"></p>
+    <button>스크롤 원위치</button>
+    <script>
+      let ele = document.getElementById("div1");
+      ele.onscroll = function () {
+        let x = ele.scrollLeft;
+        let y = ele.scrollTop;
+        console.log("x : " + x + "y : " + y);
+        document.getElementById("demo").innerHTML =
+          "x : " + x.toFixed() + "<br>y : " + y.toFixed();
+
+        if (y > 0) {
+          document.getElementById("content").style.backgroundColor = "red";
+        } else {
+          document.getElementById("content").style.backgroundColor = "#ccc";
+        }
+      };
+      document.getElementsByTagName("button")[0].onclick = function () {
+        ele.scrollLeft = 0;
+        ele.scrollTop = 0;
+      };
+    </script>
+  </body>
+</html>

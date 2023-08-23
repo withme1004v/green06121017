@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 500px;
+        padding-bottom: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="form1">
+      <p><input type="text" name="clientx" /></p>
+      <p><input type="text" name="clienty" /></p>
+      <p><input type="text" name="pagex" /></p>
+      <p><input type="text" name="pagey" /></p>
+      <p><input type="text" name="screenx" /></p>
+      <p><input type="text" name="screeny" /></p>
+    </form>
+    <script>
+      document.onmousemove = function (event) {
+        let myform = document.form1;
+        myform.clientx.value = "clientX : " + event.clientX;
+        myform.clienty.value = "clientY : " + event.clientY;
+        myform.pagex.value = "pageX : " + event.pageX;
+        myform.pagey.value = "pageY : " + event.pageY;
+        myform.screenx.value = "screenX : " + event.screenX;
+        myform.screeny.value = "screenY : " + event.screenY;
+      };
+    </script>
+  </body>
+</html>
