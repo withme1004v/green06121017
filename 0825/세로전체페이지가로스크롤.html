@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #fullpage {
+        width: 100%;
+        height: 100%;
+      }
+      .section {
+        font-size: 3vw;
+        text-align: center;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .sec4 {
+        display: block !important;
+        height: 100px !important;
+      }
+      .main {
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section sec1 active">
+        <h1>Section1</h1>
+      </div>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 1
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 2
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 3
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec3">
+        <div class="swiper-container1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 1
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 2
+            </div>
+            <div class="swiper-slide">
+              <h1>Section2</h1>
+              Slide 3
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section sec4">
+        <div class="main"></div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+          scrollingSpeed: 1000,
+          normalScrollElements: ".main",
+          scrollOverflow: true,
+          onLeave: function (origin, destination, direction) {
+            $("#fullpage").on("scroll touchmove mousewheel", function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+              return false;
+            });
+            swiper.mousewheel.disable();
+          },
+          afterLoad: function (anchorLink, index) {
+            $("#fullpage").off("scroll mousewheel");
+            if (!$(".fp-completely .swiper-wrapper").length > 0)
+              $("#fullpage").off("touchmove"); // 모바일분기
+            if (swiper) swiper.mousewheel.enable();
+            if (!$(".sec3").hasClass("active"))
+              $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
+          },
+        });
+
+        // swiper
+        var length = $(".sec2 .swiper-slide").length;
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: true,
+          on: {
+            slideChange: function () {
+              var idx = this.activeIndex;
+              if (this.activeIndex != 0 && idx != length - 1)
+                $.fn.fullpage.setAllowScrolling(false);
+              if (length == 2 && idx == 0)
+                $.fn.fullpage.setAllowScrolling(false);
+            },
+            slideChangeTransitionEnd: function () {
+              var idx = this.activeIndex;
+              if (idx == 0 || idx == length - 1)
+                $.fn.fullpage.setAllowScrolling(true);
+            },
+            touchMove: function (e) {
+              var startY = e.touches.startY;
+              setTimeout(function () {
+                if (startY > e.touches.currentY) swiper.slideNext();
+                else swiper.slidePrev();
+              }, 100);
+            },
+          },
+        });
+
+        var length1 = $(".sec2 .swiper-slide").length;
+        var swiper = new Swiper(".swiper-container1", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          mousewheel: true,
+          on: {
+            reachEnd: function () {
+              swiper.mousewheel.disable();
+            },
+            slideChange: function () {
+              var idx = this.activeIndex;
+              if (this.activeIndex != 0 || idx != length1 - 1)
+                $.fn.fullpage.setAllowScrolling(false);
+              if (length1 == 2 && idx == 0)
+                $.fn.fullpage.setAllowScrolling(true);
+            },
+            slideChangeTransitionEnd: function () {
+              var idx = this.activeIndex;
+              if (idx == 0 || idx >= length - 1)
+                $.fn.fullpage.setAllowScrolling(true);
+            },
+            touchMove: function (e) {
+              var startY = e.touches.startY;
+              setTimeout(function () {
+                if (startY > e.touches.currentY) swiper.slideNext();
+                else swiper.slidePrev();
+              }, 100);
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
