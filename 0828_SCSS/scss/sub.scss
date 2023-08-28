@@ -1,0 +1,10 @@
+@for $i from 1 through 3 {
+  .sub:nth-child(#{$i}) {
+    width: 50px * $i;
+  }
+}
+// div {
+//   ul {
+//     color: #f00;
+//   }
+// }

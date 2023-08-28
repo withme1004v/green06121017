@@ -1,0 +1,11 @@
+nav ul#gnb {
+  width: 80%;
+  margin: 0 auto;
+}
+nav ul#gnb li {
+  background: #ccc;
+}
+nav ul#gnb li a {
+  color: red;
+  text-decoration: none;
+}

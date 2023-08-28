@@ -1,0 +1,10 @@
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+#wrap nav ul {
+  display: flex;
+}
+#wrap nav ul li a {
+  color: red;
+}/*# sourceMappingURL=03.css.map */

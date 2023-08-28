@@ -1,0 +1,13 @@
+nav {
+  ul#gnb {
+    width: 80%;
+    margin: 0 auto;
+    li {
+      background: #ccc;
+      a {
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+}

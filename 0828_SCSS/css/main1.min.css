@@ -1,0 +1,1 @@
+nav{width:1000px;margin:0 auto}nav ul{display:flex}nav ul li{background:url("images/photo1.jpg")}nav ul li a{width:1000px;color:#000}header div.head ul.gnb li{width:100px}footer>div{height:100px}footer div.top{width:400px;background:blue}footer div.bottom{width:300px;background:blue}.menu:nth-child(1){width:50px}.menu:nth-child(2){width:100px}.menu:nth-child(3){width:150px}
