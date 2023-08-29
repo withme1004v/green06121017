@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: 1px solid #000;
+      }
+      section:first-child {
+        background: #ccc;
+      }
+      section:nth-child(2) {
+        background: lightcoral;
+      }
+      section:nth-child(3) {
+        background: skyblue;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background: pink;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section>
+      <div class="box" data-aos="fade-up"></div>
+      <div class="box" data-aos="fade-up"></div>
+      <div class="box" data-aos="fade-down"></div>
+      <div class="box" data-aos="fade-left"></div>
+    </section>
+    <section>
+      <div class="box" data-aos="flip-left">flip-left</div>
+      <div class="box" data-aos="flip-right">flip-right</div>
+      <div class="box" data-aos="flip-up">flip-up</div>
+      <div class="box" data-aos="flip-down">flip-down</div>
+    </section>
+    <section>
+      <div class="box" data-aos="slide-up">slide-up</div>
+      <div class="box" data-aos="slide-down">slide-down</div>
+      <div class="box" data-aos="slide-left">slide-left</div>
+      <div class="box" data-aos="slide-right">slide-right</div>
+    </section>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init();
+      //   AOS.init({
+      //     offset: 120, //트리거포인트에서 오프셋(px)
+      //     duration: 1000,
+      //     delay: 500,
+      //     easing: "ease-in",
+      //   });
+    </script>
+  </body>
+</html>
