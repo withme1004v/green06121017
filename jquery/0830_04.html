@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      //   document.getElementsByTagName("button")[0].onclick = function () {};
+      $(function () {
+        /* $("button").click(function () {
+          let txt = $("input").val();
+          console.log(txt);
+          if (txt == "변경전") {
+            $("input").val("변경후");
+          } else {
+            $("input").val("변경전");
+          }
+        });*/
+        let status = true;
+        $("button").click(function () {
+          if (status) {
+            $("input").val("변경후");
+          } else {
+            $("input").val("변경전");
+          }
+          status = !status;
+        });
+        $("input").focus(function () {
+          $(this).val("");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <input type="text" value="변경전" onfocus="this.value=''" /> -->
+    <input type="text" value="변경전" />
+    <button>클릭</button>
+  </body>
+</html>

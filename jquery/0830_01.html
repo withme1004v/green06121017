@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //$("span:only-child")
+        $("span:only-of-type")
+          .css("color", "#f00")
+          .css("border", "1px solid #000");
+        $("span, p, a").css({ color: "blue", backgroundColor: "#ccc" });
+        $("p:has(span)").css("font-size", "50px");
+      });
+    </script>
+  </head>
+  <body>
+    <p><span>span태그입니다</span></p>
+    <p>
+      <span>span태그입니다</span>
+      <a href="#">링크태그</a>
+    </p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+  </body>
+</html>

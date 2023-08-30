@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //$("[src]").css("width", "300px");
+        //$("li[class='html']").css("color", "red");
+        //$("li[class^='css']").css("color", "red");
+        //class속성이 css로 시작하는 li요소선택
+        //$("li[class|='css']").css("color", "red");
+        //class속성이 css이거나 css로 시작하는 li요소선택
+        //$("li[class$='3']").css("color", "red");
+        //class속성이 3으로 끝나는 li요소선택
+        // $("li[class~='java']").css("color", "red");
+        //class속성이 java단어가 포함되어있는 li요소선택
+        //$("li[class*='java']").css("color", "red");
+        //class속성이 java가 포함되어있는 li요소선택
+        // $(".html").parent().css("border", "1px solid #000");
+        //$(".html").parents().css("border", "1px solid #000");
+        //$(".html").parentsUntil("body").css("border", "1px solid #000");
+        // $("a").parent().parent().css("border", "1px solid #000");
+        //$(".html").children("a").css("color", "red");
+        //$(".html").find("a").css("color", "red");
+        //$(".html").next().css("color", "red");
+        //$(".html").nextAll().css("color", "red");
+        //$(".html").nextUntil(".java").css("color", "red");
+        //$(".css").siblings().css("color", "red");
+        // $(".css3").prev().css("color", "red");
+        //$(".java").prevAll().css("color", "red");
+        //$(".java").prevUntil(".css3").css("color", "red");
+        //$("li").not(".css").css("color", "red");
+        //$("li").filter(".css").css("color", "red");
+        $(".html").find("a").css("color", "red");
+        $(":empty").text("blank");
+      });
+    </script>
+  </head>
+  <body>
+    <img src="../images/photo1.jpg" alt="이미지1" />
+    <img src="../images/photo1.jpg" />
+    <!-- <p class="html">문단</p> -->
+    <ul>
+      <li class="html"><a href="#">html</a></li>
+      <li class="css">css</li>
+      <li class="css3">css3</li>
+      <li class="css-3">css-3</li>
+      <li class="scrjavaipt">javascript</li>
+      <li class="java script">javascript</li>
+      <li class="jquery">jquery</li>
+      <li class="html">
+        <div><a href="#">하위하위요소</a></div>
+      </li>
+      <li></li>
+    </ul>
+  </body>
+</html>

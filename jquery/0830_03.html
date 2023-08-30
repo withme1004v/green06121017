@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //$("ul").append('<li class="page">page</li>');
+        //ul태그 자식요소 뒤에 추가
+        //$("ul").prepend('<li class="page">page</li>');
+        // $('<li class="page">page</li>').appendTo("ul");
+        //$('<li class="page">page</li>').prependTo("ul");
+        // $("ul").clone().prependTo("body");
+        // $("ul").clone().appendTo("body");
+        //$("ul").wrap('<div class="wrap"></div>');
+        //$("ul li").wrapInner('<div class="wrap"></div>');
+        //$("ul").clone().prependTo("body");
+        /*$("ul").wrapAll('<div class="wrap"></div>');
+        $(".html").after('<li class="page">page</li>');
+        $(".html").before('<li class="page">page</li>');
+        $('<li class="css3">css3</li>').insertAfter(".css");
+        $('<li class="css3">css3</li>').insertBefore(".css");
+        $(".page").replaceWith('<li id="con">변경</li>');*/
+        let txt = $(".html").text();
+        console.log(txt);
+        //let txt2 = txt.replace("html", "페이지");
+        //let txt3 = txt.slice(start,end)
+        //let txt3 = txt.substr(start,lengh)
+        //let txt3 = txt.substring(start,end)
+        let txt3 = txt.slice(-2); //ht추출
+        console.log(txt3);
+        let txt4 = txt.substr(-2, 2); //ht추출
+        console.log(txt4);
+        let txt5 = txt.substring(-3, 2); //ht추출
+        console.log(txt5);
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li class="html">html</li>
+      <li class="css">css</li>
+      <li class="css3">css3</li>
+      <li class="javascript">javascript</li>
+      <li class="jquery">jquery</li>
+    </ul>
+  </body>
+</html>

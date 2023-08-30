@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("p").attr("class", "study").attr("id", "change");
+        let get = $("p").attr("class");
+        console.log(get);
+        //attr 속성을 가져오고 변경하고 추가
+        $("img").css("width", "300px");
+        let i = 1;
+        let img_src = $("img").attr("src");
+        $("button").click(function () {
+          i++;
+          if (i == 7) i = 1;
+          //$("img").attr("src", "../images/photo" + i + ".jpg");
+          // $("img").attr("src", img_src.replace(img_src.slice(-5, -4), i));
+          $("img")
+            .attr("src", img_src.replace(img_src.substr(-5, 1), i))
+            .attr("alt", "photo" + i);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="page">오늘은 수요일</p>
+    <img src="../images/photo1.jpg" alt="photo1" />
+    <button>이미지변경</button>
+  </body>
+</html>
