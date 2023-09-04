@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("body").append('<div id="page"></div>');
+        let ht = $("p").height();
+        console.log(ht);
+        $("div.menu").height(ht);
+        function myfnc() {
+          $("#page").html("디스플레이 : " + $("p").css("display"));
+        }
+        $("#up").click(function () {
+          $("p").slideUp(1000, myfnc);
+        });
+        $("#down").click(function () {
+          $("p").slideDown(1000, myfnc);
+        });
+        $("#toggle").click(function () {
+          $("p").slideToggle(1000, myfnc);
+        });
+      });
+    </script>
+    <title>jquery</title>
+    <style>
+      .menu {
+        border: 1px solid #000;
+        /* height: 100px; */
+      }
+      p {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.rvived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
+    <button id="up">slideup</button>
+    <button id="down">slidedown</button>
+    <button id="toggle">slidetoggle</button>
+  </body>
+</html>

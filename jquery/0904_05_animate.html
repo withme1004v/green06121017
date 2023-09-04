@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        margin: 10px;
+        background: #ccc;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      $(function () {
+        //animate(스타일,시간,속도,callback)
+        $(".move").click(function () {
+          $("p:first").animate({ left: "500px" }, 1000);
+          $("p:nth-child(2)").animate({ left: "500px" }, 1000, "swing");
+          $("p:last").animate({ left: "500px" }, 1000, "linear");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button class="move">move</button>
+  </body>
+</html>

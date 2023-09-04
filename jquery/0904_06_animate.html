@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        position: relative;
+        width: 200px;
+        /* height: 200px; */
+        padding: 20px;
+        margin: 10px;
+        background: #ccc;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      p.on {
+        width: 400px;
+        background: #8ac007;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".effect").click(function () {
+          $("p:first").addClass("on");
+          $("p:last").animate({ width: "400px" }, 1000, "linear");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <button class="effect">effect</button>
+  </body>
+</html>

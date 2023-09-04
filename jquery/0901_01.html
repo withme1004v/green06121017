@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#fadeout").click(function () {
+          $("p").removeClass().addClass("out");
+        });
+        $("#fadein").click(function () {
+          $("p").addClass("in");
+        });
+        let fade = true;
+        $("#fadetoggle").click(function () {
+          if (fade) {
+            $("p").removeClass().addClass("in");
+          } else {
+            $("p").removeClass().addClass("out");
+            fade = !fade;
+          }
+        });
+
+        // speed : "slow","fast",1000
+        // easing : "linear","swing"
+        // callback : fadeIn()메소드가 완료된 후 실행될 구문
+        $("#fadeIn").click(function () {
+          $("div").fadeIn("fast", "swing");
+        });
+        $("#fadeOut").click(function () {
+          $("div").fadeOut("slow", "linear");
+        });
+        $("#fadeToggle").click(function () {
+          $("div").fadeToggle(1000, function () {
+            $("div").text("fadeToggle");
+          });
+        });
+      });
+    </script>
+    <title>jquery</title>
+    <style>
+      p,
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      @keyframes hide {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .out {
+        animation: hide 1s forwards;
+      }
+      @keyframes show {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: ;
+        }
+      }
+      .in {
+        animation: show 1s forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <div></div>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+  </body>
+</html>

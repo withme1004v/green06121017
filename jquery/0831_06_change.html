@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("body").append('<p id="page"></p>');
+        $("#area").change(function () {
+          let txt = $(this).val();
+          $("#page").text(txt);
+        });
+      });
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="area" id="area">
+      <option value="선택안함">선택안함</option>
+      <option value="서울">대한민국 서울</option>
+      <option value="대전">대한민국 대전</option>
+      <option value="부산">대한민국 부산</option>
+    </select>
+  </body>
+</html>

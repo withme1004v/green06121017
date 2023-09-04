@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <button class="left">slideLeft</button>
+    <button class="right">slideright</button>
+    <button class="toggle">sliderToggle</button>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          // $("p").animate({ width: "0", height: "0" }, 1000);
+          $("p").animate({ width: "0" }, 1000, "swing");
+        });
+        $(".right").click(function () {
+          // $("p").animate({ width: "0", height: "0" }, 1000);
+          $("p").animate({ width: "500px" }, 1000, "swing");
+        });
+        let status = true;
+        $(".toggle").click(function () {
+          if (status) {
+            $("p").animate({ width: "0" }, 1000, "swing");
+          } else {
+            $("p").animate({ width: "500px" }, 1000, "swing");
+          }
+          status = !status;
+        });
+      });
+    </script>
+  </body>
+</html>

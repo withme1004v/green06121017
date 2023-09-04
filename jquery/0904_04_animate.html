@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        background: #ccc;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".move").click(function () {
+          $("p")
+            .animate({ left: "300px" }, 1000)
+            .animate({ top: "300px" }, 1000)
+            .animate({ left: "0px" }, 1000)
+            .animate({ top: "0px" }, 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button class="move">move</button>
+  </body>
+</html>

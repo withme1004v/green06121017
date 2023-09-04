@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //speed,easing,callback
+        //"fast","slow",1000(밀리초)
+        //easing : "swing","linear"
+
+        $("#hide").click(function () {
+          //$(this).text("show");
+          let txt = $("#hide").text();
+          if (txt == "hide") {
+            $("p").hide(1000, function () {
+              $("#hide").text("show");
+              console.log(txt);
+            });
+          } else {
+            $("p").show(1000, function () {
+              $("#hide").text("hide");
+            });
+          }
+        });
+        $("#show").click(function () {
+          $("p").show();
+        });
+        $("#toggle").click(function () {
+          $("p").toggle();
+        });
+        /*$("a").click(function (e) {
+          e.preventDefault();//a태그의 경로를 막는기능
+          $("div").fadeOut();
+        });*/
+        $("a").click(function () {
+          let txt = $("a").text();
+          if (txt == "fadeOut") {
+            $("div").fadeOut(1000, function () {
+              $("a").text("fadeIn");
+            });
+          } else {
+            $("div").fadeIn(1000, function () {
+              $("a").text("fadeOut");
+            });
+          }
+          //return false; //실행구문의 마지막에
+        });
+      });
+    </script>
+    <title>jquery</title>
+    <style>
+      p,
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+      section {
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <!-- <button id="show">show</button> -->
+    <button id="hide">hide</button>
+    <button id="toggle">toggle</button>
+    <section></section>
+    <div></div>
+    <a href="#">fadeOut</a>
+  </body>
+</html>

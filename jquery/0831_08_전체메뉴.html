@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("ul.gnb li a,.lnb").hover(
+          function () {
+            $(".lnb").css("height", "120px");
+            $(this).css("background", "#ccc");
+          },
+          function () {
+            $(".lnb").css("height", "0px");
+            $("ul.gnb li a").css("background", "#fff");
+          }
+        );
+        $(".lnb>ul>li").hover(
+          function () {
+            let i = $(this).index();
+            console.log(i);
+            $(".gnb li").eq(i).find("a").css("background", "#ccc");
+            $(".lnb").css("height", "120px");
+          },
+          function () {
+            $(".gnb li a").css("background", "#fff");
+            $(".lnb").css("height", "0px");
+          }
+        );
+      });
+    </script>
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.gnb {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        border: 1px solid #000;
+      }
+      ul.gnb li {
+        width: 20%;
+        text-align: center;
+      }
+      ul.gnb li a {
+        display: block;
+        width: 100%;
+        line-height: 50px;
+      }
+      ul.gnb li a:hover,
+      ul.gnb li a.on {
+        background: #ccc;
+      }
+      .lnb {
+        background: #ccc;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+
+      .lnb > ul {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .lnb > ul > li {
+        width: 20%;
+      }
+      .lnb > ul > li ul {
+        width: 100%;
+      }
+      .lnb > ul > li a {
+        display: block;
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+      <li><a href="#">메뉴5</a></li>
+    </ul>
+    <div class="lnb">
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴1</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+            <li><a href="#">서브메뉴5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

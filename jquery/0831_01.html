@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      //이벤트:사용자가 행하는 모든행위
+      //이벤트헨들러:이벤트가 발생했을때 실행되는 코드
+      $(function () {
+        $(".btn1").click(function () {
+          // $("p:nth-child(2)").text("버튼1을 클릭하였습니다.");
+          $(this).parent().next().text("클릭하였습니다.");
+        });
+        $(".btn2").dblclick(function () {
+          $(this).parent().next().text("버튼2을 클릭하였습니다.");
+        });
+        /* $(".btn1").on("mouseenter", function () {
+          $(this).parent().next().text("버튼1을 클릭하였습니다.");
+        });*/
+        $(".btn1").on("mouseleave", function () {
+          $(this).parent().next().text("내용1");
+        });
+        $(".btn2").on({
+          "mouseenter focus": function () {
+            $(this).parent().next().text("버튼2을 클릭하였습니다.");
+          },
+          "mouseleave blur": function () {
+            $(this).parent().next().text("내용2");
+          },
+          click: function () {
+            alert("누르지마세요");
+          },
+        });
+        //강제로 이벤트 발생시키기
+        //$(이벤트대상).단일이벤트메소드();
+        //$(이벤트대상).trigger(이벤트)
+        //$(".btn1").click();
+        //$(".btn1").trigger("mouseenter");
+        //이벤트제거
+        $(".btn1").off("click");
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p><button class="btn1">버튼1</button></p>
+    <p>내용1</p>
+    <p><button class="btn2">버튼2</button></p>
+    <p>내용2</p>
+  </body>
+</html>
