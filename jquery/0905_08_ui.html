@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #000;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #f00;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $(".box").each(function () {
+            let txt = $(this).find(".ball").data("ease");
+            console.log(txt);
+            $(this)
+              .find(".ball")
+              .animate({ left: "480px" }, 1000, txt)
+              .animate({ left: "10px" }, 1000, txt);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>move</button>
+    <div class="box box1">
+      linear
+      <div class="ball" data-ease="linear"></div>
+    </div>
+    <div class="box box2">
+      swing
+      <div class="ball" data-ease="swing"></div>
+    </div>
+    <div class="box box3">
+      easeOutBounce
+      <div class="ball" data-ease="easeOutBounce"></div>
+    </div>
+  </body>
+</html>

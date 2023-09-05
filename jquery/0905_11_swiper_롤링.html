@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../javascript/css/swiper-bundle.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/js/swiper-bundle.js"></script>
+    <style>
+      .mySwiper {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+      .swiper-slide {
+        padding: 20px 0;
+      }
+      .swiper-slide:nth-child(odd) {
+        background: pink;
+      }
+      .swiper-slide:nth-child(even) {
+        background: #ccc;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        speed: 5000,
+        loop: true,
+        spaceBetween: 0,
+        slidesPerView: 5,
+        //centeredSlides: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+      .ball {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #f00;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#ease").change(function () {
+          //let txt = $("select>option:selected").val();
+          let txt = $("select>option:selected").text();
+          console.log(txt);
+        });
+        $("button").click(function () {
+          let txt = $("select>option:selected").text();
+          $(".ball")
+            .animate({ left: "500px" }, 1000, txt)
+            .animate({ left: "0px" }, 1000, txt);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select name="ui" id="ease">
+      <option value="swing">swing</option>
+      <option value="linear">linear</option>
+      <option value="easeOutBounce">easeOutBounce</option>
+    </select>
+    <button>move</button>
+    <p class="ball"></p>
+  </body>
+</html>

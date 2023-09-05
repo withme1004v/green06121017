@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      p {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #ccc;
+        border-radius: 50%;
+        top: 100px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#move").click(function () {
+          $("p")
+            .animate({ left: "500px" }, 2000)
+            .animate({ top: "300px" }, 2000)
+            .animate({ left: "0px" }, 2000)
+            .animate({ top: "100px" }, 2000);
+        });
+        $("#btn1").click(function () {
+          $("p").stop(true, true);
+        });
+        $("#btn2").click(function () {
+          $("p").stop(true, false);
+        });
+        $("#btn3").click(function () {
+          $("p").stop(false, true);
+        });
+        $("#btn4").click(function () {
+          $("p").stop(false, false);
+        });
+        $("#btn5").click(function () {
+          $("p").stop();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="move">move</button>
+    <button id="btn1">true true</button>
+    <button id="btn2">true false</button>
+    <button id="btn3">false true</button>
+    <button id="btn4">false false</button>
+    <button id="btn5">defalt</button>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style></style>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          //$("p:nth-child(2)")
+          $("p")
+            .eq(1)
+            .animate({ marginLeft: "500px" }, 1000, "linear", function () {
+              alert("미션완료");
+            });
+        });
+        $("#btn2").click(function () {
+          //$("p:last")
+          //i=i+1 i+=1 i++
+          //marginLeft = marginLeft+50px marginLeft+=50px
+          $("p").eq(3).animate({ marginLeft: "+=50px" }, 1000, "linear");
+        });
+        //$("#btn1").click();
+        //$("#btn1").trigger("click");
+        $("#btn3").click(function () {
+          $("p")
+            .eq(5)
+            .animate({ marginLeft: "500px" }, 1000)
+            .animate({ marginLeft: "0px" }, 1000);
+        });
+        setInterval(function () {
+          $("#btn3").click();
+        }, 2000);
+        $("#btn4").click(function () {
+          $("p").eq(7).delay(1000).animate({ marginLeft: "500px" }, 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><button id="btn1">버튼1</button></p>
+    <p>500px 이동</p>
+    <p><button id="btn2">버튼2</button></p>
+    <p>50px씩 이동</p>
+    <p><button id="btn3">버튼3</button></p>
+    <p>500px 이동후 제자리</p>
+    <p><button id="btn4">버튼4</button></p>
+    <p>500px 이동</p>
+  </body>
+</html>
