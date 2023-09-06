@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      div {
+        width: 50px;
+        /* height: 50px; */
+        padding: 10px;
+        border: 10px solid #000;
+        margin: 4px;
+      }
+    </style>
+    <script>
+      $(function () {
+        // $("div").width(300);
+        $("div").css("width", "300px");
+        $("div").click(function () {
+          let x = $(this).offset();
+          $("body").append('<p id="page"></p>');
+          console.log(x);
+          $("#page").html(
+            this.tagName +
+              "태그의 가로크기는  " +
+              $(this).width() +
+              "<br>" +
+              this.tagName +
+              "태그의 세로크기는  " +
+              $(this).height() +
+              "<br>" +
+              "태그의 가로크기패딩포함는  " +
+              $(this).innerWidth() +
+              "<br>" +
+              this.tagName +
+              "태그의 세로크기패딩포함는  " +
+              $(this).innerHeight() +
+              "<br>" +
+              "태그의 가로크기패딩테두리포함는  " +
+              $(this).outerWidth() +
+              "<br>" +
+              this.tagName +
+              "태그의 세로크기패딩테두리포함는  " +
+              $(this).outerHeight() +
+              "<br>" +
+              "태그의 가로크기패딩테두리마진포함는  " +
+              $(this).outerWidth(true) +
+              "<br>" +
+              this.tagName +
+              "태그의 세로크기패딩테두리마진포함는  " +
+              $(this).outerHeight(true) +
+              "<br>"
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </div>
+  </body>
+</html>

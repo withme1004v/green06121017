@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      div {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ccc;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(document).keydown(function (e) {
+          console.log(e.keyCode);
+          if (e.keyCode == 37) {
+            $("input").val("left");
+            $("div").css("left", "-=10px");
+          } else if (e.keyCode == 39) {
+            $("input").val("right");
+            $("div").css("left", "+=10px");
+          } else if (e.keyCode == 38) {
+            $("input").val("top");
+            $("div").css("top", "-=10px");
+          } else if (e.keyCode == 40) {
+            $("input").val("bottom");
+            $("div").css("top", "+=10px");
+          }
+        });
+        $("button").click(function () {
+          //let direction = $(this).attr("class");
+          let direction = $(this).text();
+          $("input").val(direction);
+          if (direction == "left") {
+            $("div").css("left", "-=10px");
+          } else if (direction == "right") {
+            $("div").css("left", "+=10px");
+          } else if (direction == "top") {
+            $("div").css("top", "-=10px");
+          } else if (direction == "bottom") {
+            $("div").css("top", "+=10px");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><input type="text" /></p>
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+    <div></div>
+  </body>
+</html>

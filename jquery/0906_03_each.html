@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      ul {
+        list-style: none;
+      }
+      ul li {
+        float: left;
+        width: 100px;
+        text-align: center;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("ul li").each(function (i, o) {
+          console.log("i : " + i);
+          console.log("o : " + o);
+        });
+        let arr = ["하나", "둘", "셋", "넷", 100, true];
+        $.each(arr, function (index, item) {
+          console.log("item " + item);
+        });
+        let obj = { title: "다음", url: "http://www.daum.net" };
+        $.each(obj, function (index, item) {
+          console.log("index " + index);
+          console.log("item " + item);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-bg="#aaa">배경1</li>
+      <li data-bg="#bbb">배경2</li>
+      <li data-bg="#ccc">배경3</li>
+      <li data-bg="#ddd">배경4</li>
+    </ul>
+  </body>
+</html>

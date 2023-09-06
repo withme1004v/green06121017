@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        height: 3000px;
+        margin-top: 1000px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(document).mousemove(function (e) {
+          $(".clientx").text("브라우저를 기준으로 한 x좌표 : " + e.clientX);
+          $(".clienty").text("브라우저를 기준으로 한 y좌표 : " + e.clientY);
+          $(".pagex").text("페이지를 기준으로 한 x좌표 : " + e.pageX);
+          $(".pagey").text("페이지를 기준으로 한 y좌표 : " + e.pageY);
+          $(".screenx").text("스크린을 기준으로 한 x좌표 : " + e.screenX);
+          $(".screeny").text("스크린을 기준으로 한 y좌표 : " + e.screenY);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>client-x : <span class="clientx">0</span></p>
+    <p>client-y : <span class="clienty">0</span></p>
+    <p>page-x : <span class="pagex">0</span></p>
+    <p>page-y : <span class="pagey">0</span></p>
+    <p>screen-x : <span class="screenx">0</span></p>
+    <p>screen-y : <span class="screeny">0</span></p>
+  </body>
+</html>

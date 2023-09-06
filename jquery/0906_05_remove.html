@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      .addbg {
+        background: #ccc;
+      }
+      .addon {
+        color: #f00;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          //$("p").remove(".top,.bottom");
+          $("#top").toggleClass("addbg");
+          $(".middle").toggleClass("addon");
+          $(".bottom").toggleClass("addbg addon");
+        });
+        $("button").hover(
+          function () {
+            $("#top").addClass("addbg");
+            $(".middle").addClass("addon");
+            $(".bottom").addClass("addbg addon");
+          },
+          function () {
+            $("#top").removeClass("addbg");
+            $(".middle").removeClass("addon");
+            $(".bottom").removeClass("addbg addon");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <button>클릭</button>
+    <div class="info">
+      <p id="top">위에 요소</p>
+      <p class="middle">중간 요소</p>
+      <p class="bottom">아래 요소</p>
+    </div>
+  </body>
+</html>
