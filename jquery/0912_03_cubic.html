@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: Arial, 돋움, Dotum, sans-serif;
+      }
+      #cubic {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        perspective: 800px;
+      }
+      #contents {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: 1s;
+        transition-timing-function: linear;
+      }
+      #contents img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+      #contents img.one {
+        transform: translateZ(200px);
+      }
+      #contents img.two {
+        transform: rotateY(60deg) translateZ(200px);
+      }
+      #contents img.three {
+        transform: rotateY(-60deg) translateZ(200px);
+      }
+      #contents img.four {
+        transform: rotateY(60deg) translateZ(-200px);
+      }
+      #contents img.five {
+        transform: rotateY(-60deg) translateZ(-200px);
+      }
+      #contents img.six {
+        transform: translateZ(-200px);
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let x = 0;
+        let y = 0;
+
+        $("#right").click(function () {
+          $("#contents").css({ transform: "rotateY(" + (y += 60) + "deg)" });
+        });
+        $("#left").click(function () {
+          $("#contents").css({ transform: "rotateY(" + (y -= 60) + "deg)" });
+        });
+        $("#top").click(function () {
+          $("#contents").css({ transform: "rotateX(" + (x += 90) + "deg)" });
+        });
+        $("#bottom").click(function () {
+          $("#contents").css({ transform: "rotateX(" + (x -= 90) + "deg)" });
+        });
+        setInterval(function () {
+          $("#right").trigger("click");
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="cubic">
+      <div id="contents">
+        <img class="one" src="../javascript/images/cubic_3d.jpg" alt="cubic" />
+        <img
+          class="two"
+          src="../javascript/images/cubic_css3.jpg"
+          alt="cubic"
+        />
+        <img
+          class="three"
+          src="../javascript/images/cubic_device.jpg"
+          alt="cubic"
+        />
+        <img
+          class="four"
+          src="../javascript/images/cubic_multimedia.jpg"
+          alt="cubic"
+        />
+        <img
+          class="five"
+          src="../javascript/images/cubic_offline.jpg"
+          alt="cubic"
+        />
+        <img
+          class="six"
+          src="../javascript/images/cubic_semantics.jpg"
+          alt="cubic"
+        />
+      </div>
+    </div>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="top">top</button>
+    <button id="bottom">bottom</button>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #slideShow {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        height: 300px;
+        overflow: hidden;
+      }
+      .slides {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .slides li {
+        width: 1280px;
+        height: 300px;
+        float: left;
+      }
+      .slides li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .controller li {
+        position: absolute;
+        text-indent: -9999px;
+        width: 21px;
+        height: 39px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background: url(../images/btns.png);
+      }
+      .controller li.prev {
+        left: 20px;
+        background-position: -6px -4px;
+      }
+      .controller li.next {
+        right: 20px;
+        background-position: -29px -4px;
+      }
+      .page {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+      }
+      .page li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        margin: 0 2px;
+        cursor: pointer;
+      }
+      .page li:hover,
+      .page li.on {
+        background: #000;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let current = 0;
+        let i = $(".slides li").length;
+        $(".page li").eq(0).addClass("on");
+        let slideWidth = $(".slides li").width();
+        $(".slides").append($(".slides li").eq(0).clone());
+        $(".slides").prepend(
+          $(".slides li")
+            .eq(i - 1)
+            .clone()
+        );
+        $(".slides").css({
+          width: slideWidth * (i + 2) + "px",
+          left: -slideWidth + "px",
+        });
+        function showSlide(n) {
+          $(".page li").removeClass();
+          $(".page li").eq(n).addClass("on");
+          $(".slides").css({
+            left: -(n + 1) * slideWidth + "px",
+            transition: "0.5s",
+          });
+        }
+        // showSlide(1);
+        $(".page li").click(function () {
+          let i = $(this).index();
+          showSlide((current = i));
+        });
+        $(".next").click(function () {
+          if (current <= i - 1) {
+            $(".slides").css({
+              left: -(current + 2) * slideWidth + "px",
+              transition: "0.5s",
+            });
+          }
+          if (current == i - 1) {
+            setTimeout(function () {
+              $(".slides").css({ left: -slideWidth + "px", transition: "0s" });
+            }, 500);
+            current = -1;
+          }
+          current += 1;
+          $(".page li").removeClass();
+          $(".page li").eq(current).addClass("on");
+        });
+        $(".prev").click(function () {
+          if (current >= 0) {
+            $(".slides").css({
+              left: -current * slideWidth + "px",
+              transition: "0.5s",
+            });
+          }
+          if (current == 0) {
+            setTimeout(function () {
+              $(".slides").css({
+                left: -i * slideWidth + "px",
+                transition: "0s",
+              });
+            }, 500);
+            current = i;
+          }
+          current -= 1;
+          $(".page li").removeClass();
+          $(".page li").eq(current).addClass("on");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="slideShow">
+      <ul class="slides">
+        <li><img src="../images/photo1.jpg" alt="photo1" /></li>
+        <li><img src="../images/photo2.jpg" alt="photo2" /></li>
+        <li><img src="../images/photo3.jpg" alt="photo3" /></li>
+        <li><img src="../images/photo4.jpg" alt="photo4" /></li>
+        <li><img src="../images/photo5.jpg" alt="photo5" /></li>
+        <li><img src="../images/photo6.jpg" alt="photo6" /></li>
+      </ul>
+      <ul class="controller">
+        <li class="prev">prev</li>
+        <li class="next">next</li>
+      </ul>
+      <ul class="page">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
