@@ -143,6 +143,19 @@
           $(".page li").removeClass();
           $(".page li").eq(current).addClass("on");
         });
+        let interval = setInterval(function () {
+          $(".next").trigger("click");
+        }, 2000);
+        $("#slideShow").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              $(".next").trigger("click");
+            }, 2000);
+          }
+        );
       });
     </script>
   </head>
